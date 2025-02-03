@@ -1,0 +1,865 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RealmTodo</name>
+    </assembly>
+    <members>
+        <member name="F:AerobicWithMe.Models.MapPin.RealmSchema">
+            <summary>
+            Defines the schema for the <see cref="T:AerobicWithMe.Models.MapPin"/> class.
+            </summary>
+        </member>
+        <member name="P:AerobicWithMe.Models.MapPin.IsManaged">
+            <inheritdoc />
+        </member>
+        <member name="P:AerobicWithMe.Models.MapPin.IsValid">
+            <inheritdoc />
+        </member>
+        <member name="P:AerobicWithMe.Models.MapPin.IsFrozen">
+            <inheritdoc />
+        </member>
+        <member name="P:AerobicWithMe.Models.MapPin.Realm">
+            <inheritdoc />
+        </member>
+        <member name="P:AerobicWithMe.Models.MapPin.ObjectSchema">
+            <inheritdoc />
+        </member>
+        <member name="P:AerobicWithMe.Models.MapPin.DynamicApi">
+            <inheritdoc />
+        </member>
+        <member name="P:AerobicWithMe.Models.MapPin.BacklinksCount">
+            <inheritdoc />
+        </member>
+        <member name="E:AerobicWithMe.Models.MapPin.PropertyChanged">
+            <inheritdoc />
+        </member>
+        <member name="M:AerobicWithMe.Models.MapPin.op_Explicit(Realms.RealmValue)~AerobicWithMe.Models.MapPin">
+            <summary>
+            Converts a <see cref="T:Realms.RealmValue"/> to <see cref="T:AerobicWithMe.Models.MapPin"/>. Equivalent to <see cref="M:Realms.RealmValue.AsNullableRealmObject``1"/>.
+            </summary>
+            <param name="val">The <see cref="T:Realms.RealmValue"/> to convert.</param>
+            <returns>The <see cref="T:AerobicWithMe.Models.MapPin"/> stored in the <see cref="T:Realms.RealmValue"/>.</returns>
+        </member>
+        <member name="M:AerobicWithMe.Models.MapPin.op_Implicit(AerobicWithMe.Models.MapPin)~Realms.RealmValue">
+            <summary>
+            Implicitly constructs a <see cref="T:Realms.RealmValue"/> from <see cref="T:AerobicWithMe.Models.MapPin"/>.
+            </summary>
+            <param name="val">The value to store in the <see cref="T:Realms.RealmValue"/>.</param>
+            <returns>A <see cref="T:Realms.RealmValue"/> containing the supplied <paramref name="val"/>.</returns>
+        </member>
+        <member name="M:AerobicWithMe.Models.MapPin.op_Implicit(AerobicWithMe.Models.MapPin)~Realms.QueryArgument">
+            <summary>
+            Implicitly constructs a <see cref="T:Realms.QueryArgument"/> from <see cref="T:AerobicWithMe.Models.MapPin"/>.
+            </summary>
+            <param name="val">The value to store in the <see cref="T:Realms.QueryArgument"/>.</param>
+            <returns>A <see cref="T:Realms.QueryArgument"/> containing the supplied <paramref name="val"/>.</returns>
+        </member>
+        <member name="M:AerobicWithMe.Models.MapPin.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="M:AerobicWithMe.Models.MapPin.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:AerobicWithMe.Models.MapPin.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:AerobicWithMe.Models.MapPin.ToString">
+            <inheritdoc />
+        </member>
+        <member name="F:AerobicWithMe.Models.UserRecord.RealmSchema">
+            <summary>
+            Defines the schema for the <see cref="T:AerobicWithMe.Models.UserRecord"/> class.
+            </summary>
+        </member>
+        <member name="P:AerobicWithMe.Models.UserRecord.IsManaged">
+            <inheritdoc />
+        </member>
+        <member name="P:AerobicWithMe.Models.UserRecord.IsValid">
+            <inheritdoc />
+        </member>
+        <member name="P:AerobicWithMe.Models.UserRecord.IsFrozen">
+            <inheritdoc />
+        </member>
+        <member name="P:AerobicWithMe.Models.UserRecord.Realm">
+            <inheritdoc />
+        </member>
+        <member name="P:AerobicWithMe.Models.UserRecord.ObjectSchema">
+            <inheritdoc />
+        </member>
+        <member name="P:AerobicWithMe.Models.UserRecord.DynamicApi">
+            <inheritdoc />
+        </member>
+        <member name="P:AerobicWithMe.Models.UserRecord.BacklinksCount">
+            <inheritdoc />
+        </member>
+        <member name="E:AerobicWithMe.Models.UserRecord.PropertyChanged">
+            <inheritdoc />
+        </member>
+        <member name="M:AerobicWithMe.Models.UserRecord.op_Explicit(Realms.RealmValue)~AerobicWithMe.Models.UserRecord">
+            <summary>
+            Converts a <see cref="T:Realms.RealmValue"/> to <see cref="T:AerobicWithMe.Models.UserRecord"/>. Equivalent to <see cref="M:Realms.RealmValue.AsNullableRealmObject``1"/>.
+            </summary>
+            <param name="val">The <see cref="T:Realms.RealmValue"/> to convert.</param>
+            <returns>The <see cref="T:AerobicWithMe.Models.UserRecord"/> stored in the <see cref="T:Realms.RealmValue"/>.</returns>
+        </member>
+        <member name="M:AerobicWithMe.Models.UserRecord.op_Implicit(AerobicWithMe.Models.UserRecord)~Realms.RealmValue">
+            <summary>
+            Implicitly constructs a <see cref="T:Realms.RealmValue"/> from <see cref="T:AerobicWithMe.Models.UserRecord"/>.
+            </summary>
+            <param name="val">The value to store in the <see cref="T:Realms.RealmValue"/>.</param>
+            <returns>A <see cref="T:Realms.RealmValue"/> containing the supplied <paramref name="val"/>.</returns>
+        </member>
+        <member name="M:AerobicWithMe.Models.UserRecord.op_Implicit(AerobicWithMe.Models.UserRecord)~Realms.QueryArgument">
+            <summary>
+            Implicitly constructs a <see cref="T:Realms.QueryArgument"/> from <see cref="T:AerobicWithMe.Models.UserRecord"/>.
+            </summary>
+            <param name="val">The value to store in the <see cref="T:Realms.QueryArgument"/>.</param>
+            <returns>A <see cref="T:Realms.QueryArgument"/> containing the supplied <paramref name="val"/>.</returns>
+        </member>
+        <member name="M:AerobicWithMe.Models.UserRecord.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="M:AerobicWithMe.Models.UserRecord.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:AerobicWithMe.Models.UserRecord.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:AerobicWithMe.Models.UserRecord.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:AerobicWithMe.ViewModels.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.BaseViewModel.isBusy"/>
+        </member>
+        <member name="M:AerobicWithMe.ViewModels.BaseViewModel.OnIsBusyChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:AerobicWithMe.ViewModels.BaseViewModel.IsBusy"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AerobicWithMe.ViewModels.BaseViewModel.IsBusy"/> is changed.</remarks>
+        </member>
+        <member name="T:AerobicWithMe.ViewModels.LoginViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.LoginViewModel.appearingCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.LoginViewModel.AppearingCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.LoginViewModel.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.LoginViewModel.OnAppearing"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.LoginViewModel.loginCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.LoginViewModel.LoginCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.LoginViewModel.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.LoginViewModel.Login"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.LoginViewModel.signUpCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.LoginViewModel.SignUpCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.LoginViewModel.SignUpCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.LoginViewModel.SignUp"/>.</summary>
+        </member>
+        <member name="T:AerobicWithMe.ViewModels.EditMapPinViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.InitialMapPin">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.initialMapPin"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.InputTrackName">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.inputTrackName"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.Map_nameNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.map_nameNew"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.Label_pinNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.label_pinNew"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.AddressNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.addressNew"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.LatitudeNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.latitudeNew"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.LongtiudeNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.longtiudeNew"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.PageHeader">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.pageHeader"/>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.showTrackCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.ShowTrackCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.ShowTrackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.ShowTrack"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.printListCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.PrintListCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.PrintListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.PrintList"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.uploadToCloudPinsCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadToCloudPinsCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadToCloudPinsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadToCloudPins"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.savePinCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.SavePinCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.SavePinCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.SavePin(Maui.GoogleMaps.Pin)"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="T:AerobicWithMe.ViewModels.MapsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ConnectionStatusIcon">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.connectionStatusIcon"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.IsShowAllTasks">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.isShowAllTasks"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.Maps">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.maps"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.DataExplorerLink">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.dataExplorerLink"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.InitialUserRecord">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.initialUserRecord"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ProfileNameNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.profileNameNew"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.MapNameNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.mapNameNew"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.TrackTimeNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.trackTimeNew"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.UploadDateTimeNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.uploadDateTimeNew"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.Comment">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.comment"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.PageHeader">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.pageHeader"/>
+        </member>
+        <member name="M:AerobicWithMe.ViewModels.MapsViewModel.OnIsShowAllTasksChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.IsShowAllTasks"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.IsShowAllTasks"/> is changed.</remarks>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.appearingCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.AppearingCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.OnAppearing"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.saveUserRecordCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.SaveUserRecordCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.SaveUserRecordCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.SaveUserRecord"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.goToUserRecordsListCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.GoToUserRecordsListCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.GoToUserRecordsListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.GoToUserRecordsList"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.logoutCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.LogoutCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.LogoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.Logout"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.testCommandCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.TestCommandCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.TestCommandCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.TestCommand(AerobicWithMe.Models.MapPin)"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.chooseMapFromListCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.ChooseMapFromListCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ChooseMapFromListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.ChooseMapFromList(AerobicWithMe.Models.MapPin)"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.toMapPageCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.ToMapPageCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ToMapPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.ToMapPage"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.deleteMapCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.DeleteMapCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.DeleteMapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.DeleteMap(AerobicWithMe.Models.MapPin)"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.deleteSinglePinCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.DeleteSinglePinCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.DeleteSinglePinCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.DeleteSinglePin(AerobicWithMe.Models.MapPin)"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.refreshCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.RefreshCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.RefreshCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.Refresh"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.toTimerPageCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.ToTimerPageCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ToTimerPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.ToTimerPage"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.changeConnectionStatusCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.ChangeConnectionStatusCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ChangeConnectionStatusCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.ChangeConnectionStatus"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.urlTapCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.UrlTapCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.UrlTapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.UrlTap(System.String)"/>.</summary>
+        </member>
+        <member name="T:AerobicWithMe.ViewModels.EditUserRecordViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.InputUserName">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.inputUserName"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.InitialUserRecord">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.initialUserRecord"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.ProfileNameNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.profileNameNew"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.MapNameNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.mapNameNew"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.TrackTimeNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.trackTimeNew"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.UploadDateTimeNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.uploadDateTimeNew"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.Comment">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.comment"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.PageHeader">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.pageHeader"/>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditUserRecordViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="T:AerobicWithMe.ViewModels.UserRecordsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ConnectionStatusIcon">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.connectionStatusIcon"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.IsShowAllTasks">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.isShowAllTasks"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.Maps">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.maps"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DataExplorerLink">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.dataExplorerLink"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.UserRecordsList">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.userRecordsList"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.SortOptions">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel._SortOptions"/>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.SelectedSortOption">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.selectedSortOption"/>
+        </member>
+        <member name="M:AerobicWithMe.ViewModels.UserRecordsViewModel.OnIsShowAllTasksChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.IsShowAllTasks"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.IsShowAllTasks"/> is changed.</remarks>
+        </member>
+        <member name="M:AerobicWithMe.ViewModels.UserRecordsViewModel.OnSelectedSortOptionChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.SelectedSortOption"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.SelectedSortOption"/> is changed.</remarks>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.deleteUserRecordCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteUserRecordCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteUserRecordCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteUserRecord(AerobicWithMe.Models.UserRecord)"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.showRecordCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ShowRecordCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ShowRecordCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.ShowRecord(AerobicWithMe.Models.UserRecord)"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.appearingCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.AppearingCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.OnAppearing"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.logoutCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.LogoutCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.LogoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.Logout"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.toMapPageCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ToMapPageCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ToMapPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.ToMapPage"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.deleteMapCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteMapCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteMapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteMap(AerobicWithMe.Models.MapPin)"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.deleteSinglePinCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteSinglePinCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteSinglePinCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteSinglePin(AerobicWithMe.Models.MapPin)"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.refreshCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.RefreshCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.RefreshCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.Refresh"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.toTimerPageCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ToTimerPageCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ToTimerPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.ToTimerPage"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.changeConnectionStatusCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ChangeConnectionStatusCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ChangeConnectionStatusCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.ChangeConnectionStatus"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.urlTapCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.UrlTapCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.UrlTapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.UrlTap(System.String)"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.goToMapsListCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.GoToMapsListCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.GoToMapsListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.GoToMapsList"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.sortUserRecordsCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.SortUserRecordsCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.SortUserRecordsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.SortUserRecords"/>.</summary>
+        </member>
+        <member name="T:AerobicWithMe.Views.MapPage">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:AerobicWithMe.Views.MapPage.toTimerPageCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.ToTimerPageCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.Views.MapPage.ToTimerPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.ToTimerPage"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.Views.MapPage.zoomToMyLocationCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.ZoomToMyLocationCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.Views.MapPage.ZoomToMyLocationCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.ZoomToMyLocation"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.Views.MapPage.goToUserRecordsListCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.GoToUserRecordsListCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.Views.MapPage.GoToUserRecordsListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.GoToUserRecordsList"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.Views.MapPage.deletLastPointCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.DeletLastPointCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.Views.MapPage.DeletLastPointCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.DeletLastPoint"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.Views.MapPage.addToCloudCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.AddToCloudCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.Views.MapPage.AddToCloudCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.AddToCloud"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.Views.MapPage.calcDistanceCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.CalcDistanceCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.Views.MapPage.CalcDistanceCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.CalcDistance"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.Views.MapPage.resetMapCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.ResetMapCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.Views.MapPage.ResetMapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.ResetMap"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.Views.MapPage.editPointCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.EditPointCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.Views.MapPage.EditPointCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.EditPoint"/>.</summary>
+        </member>
+        <member name="T:AerobicWithMe.Views.AddRecordToDb">
+            <inheritdoc/>
+        </member>
+        <member name="F:AerobicWithMe.Views.AddRecordToDb.upLoadToMongoCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.AddRecordToDb.UpLoadToMongoCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.Views.AddRecordToDb.UpLoadToMongoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.AddRecordToDb.UpLoadToMongo"/>.</summary>
+        </member>
+        <member name="T:AerobicWithMe.Views.TimerPage">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:AerobicWithMe.Views.TimerPage.startTimerCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.TimerPage.StartTimerCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.Views.TimerPage.StartTimerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.TimerPage.StartTimer"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.Views.TimerPage.pauseTimerCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.TimerPage.PauseTimerCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.Views.TimerPage.PauseTimerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.TimerPage.PauseTimer"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.Views.TimerPage.resetTimerCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.TimerPage.ResetTimerCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.Views.TimerPage.ResetTimerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.TimerPage.ResetTimer"/>.</summary>
+        </member>
+        <member name="F:AerobicWithMe.Views.TimerPage.uploadCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.TimerPage.UploadCommand"/>.</summary>
+        </member>
+        <member name="P:AerobicWithMe.Views.TimerPage.UploadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.TimerPage.Upload"/>.</summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InitialMapPin">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InitialMapPin" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InputTrackName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InputTrackName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Map_nameNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Map_nameNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Label_pinNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Label_pinNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AddressNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AddressNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LatitudeNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LatitudeNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LongtiudeNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LongtiudeNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PageHeader">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PageHeader" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConnectionStatusIcon">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConnectionStatusIcon" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsShowAllTasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsShowAllTasks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Maps">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Maps" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DataExplorerLink">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DataExplorerLink" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InitialUserRecord">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InitialUserRecord" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProfileNameNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProfileNameNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MapNameNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MapNameNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TrackTimeNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TrackTimeNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UploadDateTimeNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UploadDateTimeNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Comment">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Comment" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InputUserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InputUserName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserRecordsList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserRecordsList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SortOptions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SortOptions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedSortOption">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedSortOption" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InitialMapPin">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InitialMapPin" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InputTrackName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InputTrackName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Map_nameNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Map_nameNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Label_pinNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Label_pinNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AddressNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AddressNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LatitudeNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LatitudeNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LongtiudeNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LongtiudeNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PageHeader">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PageHeader" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConnectionStatusIcon">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConnectionStatusIcon" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsShowAllTasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsShowAllTasks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Maps">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Maps" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DataExplorerLink">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DataExplorerLink" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InitialUserRecord">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InitialUserRecord" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProfileNameNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProfileNameNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MapNameNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MapNameNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TrackTimeNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TrackTimeNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UploadDateTimeNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UploadDateTimeNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Comment">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Comment" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InputUserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InputUserName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserRecordsList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserRecordsList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SortOptions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SortOptions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedSortOption">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedSortOption" generated properties.</summary>
+        </member>
+    </members>
+</doc>

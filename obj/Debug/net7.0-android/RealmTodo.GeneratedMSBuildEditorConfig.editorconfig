@@ -1,0 +1,125 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net7.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AerobicWithMe
+build_property.ProjectDir = D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/BusyPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.BusyPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\BusyPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\BusyPopup.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/MapPin/EditMapPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.MapPin.EditMapPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MapPin\EditMapPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MapPin\EditMapPage.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/MapPin/MapsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.MapPin.MapsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MapPin\MapsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MapPin\MapsPage.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/MapSettings/AddMapToDbPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.MapSettings.AddMapToDbPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MapSettings\AddMapToDbPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MapSettings\AddMapToDbPage.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/MapSettings/DistancePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.MapSettings.DistancePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MapSettings\DistancePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MapSettings\DistancePage.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/MapSettings/EditPinAddr.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.MapSettings.EditPinAddr.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MapSettings\EditPinAddr.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MapSettings\EditPinAddr.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/MapSettings/MapPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.MapSettings.MapPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MapSettings\MapPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MapSettings\MapPage.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/PropertyTriggerXaml.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.PropertyTriggerXaml.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PropertyTriggerXaml.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PropertyTriggerXaml.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/TestPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.TestPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\TestPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\TestPage.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/UserRecords/AddRecordToDb.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.UserRecords.AddRecordToDb.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UserRecords\AddRecordToDb.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UserRecords\AddRecordToDb.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/UserRecords/TimerPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.UserRecords.TimerPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UserRecords\TimerPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UserRecords\TimerPage.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/UserRecords/UserDetails.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.UserRecords.UserDetails.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UserRecords\UserDetails.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UserRecords\UserDetails.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/UserRecords/UserRecordsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.UserRecords.UserRecordsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UserRecords\UserRecordsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UserRecords\UserRecordsPage.xaml

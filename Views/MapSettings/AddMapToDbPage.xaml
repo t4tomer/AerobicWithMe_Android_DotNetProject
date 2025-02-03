@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AerobicWithMe.Views.AddMapToDbPage"
+             xmlns:vm="clr-namespace:AerobicWithMe.ViewModels"
+             Title="Add Track to DB ">
+
+    <ContentPage.BindingContext>
+        <vm:EditMapPinViewModel />
+    </ContentPage.BindingContext>
+    
+    
+    <VerticalStackLayout Padding="10" Spacing="20">
+        <Label 
+            Text="{Binding PageHeader}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="{DynamicResource Primary}"/>
+        <Entry Text="{Binding InputTrackName}" Placeholder="Enter Map Name"  PlaceholderColor="#787878"/>
+       
+        <HorizontalStackLayout HorizontalOptions="Center" >
+            
+            <Button  Margin="0,0,20,0" Text="OK" Command="{Binding UploadToCloudPinsCommand}"/>
+            
+            <Button  BackgroundColor="#454556"
+                    Text="Cancel" Command="{Binding CancelCommand}"/>
+        
+        </HorizontalStackLayout>
+        
+    </VerticalStackLayout>
+</ContentPage>

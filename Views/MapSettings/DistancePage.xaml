@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AerobicWithMe.Views.DistancePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Distance Calculation">
+
+    <StackLayout
+        Padding="20"
+        VerticalOptions="CenterAndExpand"
+        HorizontalOptions="Center">
+
+        <!-- This Label will display the total distance -->
+        <Label
+            Text="{Binding TotalDistanceText}"
+            TextColor="Red"
+            FontSize="20"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand" />
+
+        <!-- ListView to display the list of strings -->
+        <ListView
+            ItemsSource="{Binding StringList}" 
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="FillAndExpand">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Using ViewCell for more control over the text appearance -->
+                    <ViewCell>
+                        <StackLayout Padding="-1">
+                            <Label 
+                                Text="{Binding}" 
+                                FontSize="14" 
+                                TextColor="Black" 
+                                Margin="0,-20" />
+                            <!-- Set vertical margin for spacing -->
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>

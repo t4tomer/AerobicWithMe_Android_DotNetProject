@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AerobicWithMe.Views.AddRecordToDb"
+             xmlns:vm="clr-namespace:AerobicWithMe.ViewModels"
+             Title="{Binding TrackNameTitle}" >
+    
+    <ContentPage.BindingContext>
+        <vm:EditUserRecordViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="10" Spacing="20">
+
+
+        <!-- User Name Section -->
+        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+            <Label 
+                Text="User Name:"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                TextColor="{DynamicResource Primary}"/>
+            <Entry 
+                Text="{Binding InputUserName}" 
+                Placeholder="Enter User Name" 
+                PlaceholderColor="#787878"
+                HorizontalOptions="FillAndExpand"/>
+        </HorizontalStackLayout>
+
+        <!-- Comments Section -->
+        <VerticalStackLayout Spacing="0" Padding="0,-2,0,0">
+            <Label 
+                Text="Comments:" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Start"
+                TextColor="{DynamicResource Primary}"/>
+            <Entry 
+                Text="{Binding CommentText}" 
+                Placeholder="Enter your comments here" 
+                PlaceholderColor="#787878"
+                HorizontalOptions="FillAndExpand"/>
+        </VerticalStackLayout>
+
+        
+        
+
+        <!-- MapName Section -->
+        <HorizontalStackLayout Spacing="10" Padding="0,0,0,0" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+
+            <Label 
+            Text="MapName:" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            TextColor="{DynamicResource Primary}"/>
+
+            <Label 
+                Text="{Binding TrackName}" 
+                VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand"
+                TextColor="{DynamicResource Primary}"/>
+
+        </HorizontalStackLayout>
+
+
+        <!-- Recrod Time Section -->
+        <HorizontalStackLayout Spacing="10" Padding="0,0,0,0" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+
+            <Label 
+            Text="Record Time:" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            TextColor="{DynamicResource Primary}"/>
+
+            <Label 
+                Text="{Binding RecordUserTime}" 
+                VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand"
+                TextColor="{DynamicResource Primary}"/>
+
+        </HorizontalStackLayout>
+
+        <!-- Upload Time Section -->
+        <HorizontalStackLayout Spacing="10" Padding="0,0,0,0" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+
+            <Label 
+            Text="Upload Time:" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            TextColor="{DynamicResource Primary}"/>
+
+            <Label 
+                Text="{Binding CurrentTime}" 
+                VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand"
+                TextColor="{DynamicResource Primary}"
+                FontSize="14" 
+                />
+            <!-- Set font size for the label -->
+            
+
+        </HorizontalStackLayout>
+
+        <!-- Upload Date Section -->
+        <HorizontalStackLayout Spacing="10" Padding="0,0,0,0" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+
+            <Label 
+            Text="Upload Date:" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            TextColor="{DynamicResource Primary}"/>
+
+            <Label 
+                Text="{Binding CurrentDate}" 
+                VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand"
+                TextColor="{DynamicResource Primary}"
+                FontSize="14"
+            />
+            <!-- Set font size for the label -->
+
+
+        </HorizontalStackLayout>
+
+
+
+
+        <!-- Buttons Section -->
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button Margin="0,0,20,0" Text="OK" Command="{Binding UpLoadToMongoCommand}" />
+            <Button BackgroundColor="#454556"
+                    Text="Cancel" Command="{Binding CancelCommand}"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

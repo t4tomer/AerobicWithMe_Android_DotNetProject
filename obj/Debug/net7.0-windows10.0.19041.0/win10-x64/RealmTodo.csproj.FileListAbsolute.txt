@@ -1,0 +1,12 @@
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\RealmTodo.csproj.AssemblyReference.cache
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauiimage.inputs
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauifont.inputs
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauisplash.inputs
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauimanifest.stamp
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.i.cs
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.cs
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\XamlTypeInfo.g.cs
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xaml
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\XamlSaveStateFile.xml
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\RealmTodo.GeneratedMSBuildEditorConfig.editorconfig

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AerobicWithMe.Views.MapsPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:vm="clr-namespace:AerobicWithMe.ViewModels"
+             BackgroundColor="#E3FCF7"
+             x:Name="mapsPage">
+
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior
+            EventName="Appearing"
+            Command="{Binding AppearingCommand}" />
+    </ContentPage.Behaviors>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Change Connection Status" 
+                     Order="Primary" 
+                     IconImageSource="{Binding ConnectionStatusIcon}" 
+                     Command="{Binding ChangeConnectionStatusCommand}" />
+
+        <ToolbarItem Text="Logout" 
+                     Order="Primary" 
+                     IconImageSource="logout.png" 
+                     Command="{Binding LogoutCommand}" />
+
+        <ToolbarItem Text="Refresh" 
+                     Order="Primary" 
+                     IconImageSource="refresh.png" 
+                     Command="{Binding RefreshCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.BindingContext>
+        <vm:MapsViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <Grid>
+            <!-- Define the rows in the grid -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70" />     <!-- Switch that shows All Users Maps Label -->
+                <RowDefinition Height="*" />      <!-- ListView of all the maps-->
+                <RowDefinition Height="60" />     <!-- Timer Button -->
+                <RowDefinition Height="60" />     <!-- Create Map Button -->
+                <RowDefinition Height="60" />     <!-- Show All User Records Button -->
+              
+            </Grid.RowDefinitions>
+
+            <!-- Show All Users Maps Label with Switch -->
+            <StackLayout Orientation="Horizontal"
+                         BackgroundColor="#E3FCF7"
+                         Padding="20"
+                         Spacing="15">
+                <Label HorizontalTextAlignment="End"
+                       Text="Show All Users Maps"
+                       FontSize="15"  
+                       FontAttributes="Bold"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="Center" />
+
+                <Switch HorizontalOptions="End" 
+                        VerticalOptions="Center"
+                        IsToggled="{Binding IsShowAllTasks}"
+                        Toggled="Switch_Toggled" />
+            </StackLayout>
+
+            <!-- ListView for displaying maps -->
+            <ListView ItemsSource="{Binding Maps}"
+                      SelectionMode="None"
+                      Grid.Row="1"
+                      BackgroundColor="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <CheckBox IsChecked="{Binding IsComplete}" 
+                                          VerticalOptions="Center" 
+                                          IsEnabled="{Binding IsMine}" />
+
+                                <StackLayout Orientation="Horizontal" 
+                                             HorizontalOptions="FillAndExpand" 
+                                             VerticalOptions="Center">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                            Command="{Binding Path=BindingContext.ChooseMapFromListCommand, Source={x:Reference mapsPage}}"
+                                            CommandParameter="{Binding .}" />
+                                    </StackLayout.GestureRecognizers>
+
+                                    <Label Text="{Binding Mapname}"
+                                           HorizontalOptions="FillAndExpand"
+                                           VerticalOptions="Center" />
+
+                                    <Label Text="(mine)"
+                                           FontSize="Small"
+                                           Margin="15"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="End"
+                                           IsVisible="{Binding IsMine}" />
+                                </StackLayout>
+
+                                <Button ImageSource="close.png"
+                                        BackgroundColor="Transparent"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="End"
+                                        Command="{Binding Path=BindingContext.DeleteMapCommand, Source={x:Reference mapsPage}}"
+                                        CommandParameter="{Binding .}"
+                                        IsEnabled="{Binding IsMine}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!-- Timer Button -->
+            <Button Grid.Row="2"
+                    Margin="5"
+                    Text="Timer Button"
+                    FontSize="12"
+                    Padding="5,0,5,10"
+                    Command="{Binding ToTimerPageCommand}"
+                    BackgroundColor="Purple" />
+
+            <!-- Create Map Button -->
+            <Button Grid.Row="3"
+                    Margin="5"
+                    Text="Create Map"
+                    FontSize="12"
+                    Padding="5,0,5,10"
+                    Command="{Binding ToMapPageCommand}"
+                    BackgroundColor="Teal" />
+
+            <!-- Show All User Records Button -->
+            <Button Grid.Row="4"
+                    Margin="5"
+                    Text="Show All User Records"
+                    FontSize="12"
+                    Padding="5,0,5,10"
+                    Command="{Binding GoToUserRecordsListCommand}"
+                    BackgroundColor="BlueViolet" />
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,107 @@
+﻿<ContentPage
+    x:Class="AerobicWithMe.Views.MapPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:maps="clr-namespace:Maui.GoogleMaps;assembly=Maui.GoogleMaps"
+     Title="{Binding MapTitle}">
+
+    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <!-- Show Google Map -->
+        <maps:Map
+            x:Name="myMap"
+            InitialCameraUpdate="31.268333463883636, 34.80691033370654, 5, 30, 60"
+            MapClicked="addPointOnMap"
+            MyLocationEnabled="True"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1" />
+
+        <!-- Custom Toolbar -->
+        <StackLayout
+            Orientation="Horizontal"
+            BackgroundColor="Transparent"
+            Padding="10"
+            Margin="30"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            HeightRequest="50"
+            IsVisible="True">
+
+            <Button
+                x:Name="EditPointButton"
+                ImageSource="edit_point.png"
+                Command="{Binding EditPointCommand}"               
+                
+                BackgroundColor="Transparent"
+                Padding="30" />
+
+            <Button
+                x:Name="ClearMapButton"
+                ImageSource="clear.png"
+                Command="{Binding ResetMapCommand}"               
+                BackgroundColor="Transparent"
+                Padding="0" />
+
+            <Button
+                x:Name="DistanceButton"
+                ImageSource="distance.png"
+                Command="{Binding CalcDistanceCommand}"
+                BackgroundColor="Transparent"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                AbsoluteLayout.LayoutBounds="0.42, 1.0, AutoSize, AutoSize" />
+
+
+            <Button
+                x:Name="AddToCloudButton"
+                ImageSource="to_cloud.png"
+                Command="{Binding AddToCloudCommand}"                       
+
+                BackgroundColor="Transparent"
+                Padding="10" />
+
+
+
+
+
+        </StackLayout>
+
+        <Button
+            x:Name="DeleteLastPointButton"
+            ImageSource="back.png"
+            BackgroundColor="Transparent"
+            Command="{Binding DeletLastPointCommand}"                       
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.42, 1.0, AutoSize, AutoSize" />
+
+
+
+        <Button
+            x:Name="ZoomButton"
+            ImageSource="zoom.png"
+            Command="{Binding ZoomToMyLocationCommand}" 
+            
+            BackgroundColor="Transparent"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.19, 1.0, AutoSize, AutoSize" />
+
+        <Button
+            x:Name="StartExcericeButton"
+            ImageSource="start_excerice2.png"
+            BackgroundColor="Transparent"
+             Command="{Binding ToTimerPageCommand}" 
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.62, 1.0, AutoSize, AutoSize" />
+
+        <Button
+            x:Name="UsersRecordsButton"
+            ImageSource="records_of_users.png"
+            BackgroundColor="Transparent"
+             Command="{Binding GoToUserRecordsListCommand}" 
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.81, 1.0, AutoSize, AutoSize" />
+
+
+
+
+
+    </AbsoluteLayout>
+</ContentPage>

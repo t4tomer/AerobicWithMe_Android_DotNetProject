@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AerobicWithMe.Views.EditMapPage"
+             xmlns:vm="clr-namespace:AerobicWithMe.ViewModels"
+             Title="Edit Map Name ">
+    <ContentPage.BindingContext>
+        <vm:EditMapPinViewModel />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout Padding="10" Spacing="20">
+        <Label 
+            Text="{Binding PageHeader}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="{DynamicResource Primary}"/>
+        <Entry 
+            x:Name="TextBox"
+            Text="{Binding Mapname}" 
+            Placeholder="MapPin Summary" 
+            PlaceholderColor="#787878"/>
+        <HorizontalStackLayout HorizontalOptions="Center" >
+            <Button  
+                    x:Name="OkButton"
+                    Margin="0,0,20,0"
+                    Text="OK" 
+            />
+            <Button 
+                    BackgroundColor="#454556"
+                    Text="Cancel" Command="{Binding CancelCommand}"
+            />
+            
+            <Button
+            Grid.Row="4"
+            Margin="5"
+            Text="Show Track"
+            FontSize="12" 
+            Padding="5,0,5,10"        
+            Command="{Binding ShowTrackCommand}" />
+
+
+
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

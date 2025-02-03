@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AerobicWithMe.Views.UserDetails"
+             xmlns:vm="clr-namespace:AerobicWithMe.ViewModels"
+             Title="User Details" >
+    
+    <ContentPage.BindingContext>
+        <vm:EditUserRecordViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="10" Spacing="20">
+
+
+
+        <!-- User Name Section -->
+        <HorizontalStackLayout Spacing="10" Padding="0,0,0,0" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+
+            <Label 
+            Text="User Name:" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            TextColor="{DynamicResource Primary}"/>
+
+            <Label 
+                Text="{Binding RecordUserProfileNameXAML}" 
+                VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand"
+                TextColor="{DynamicResource Primary}"
+                FontSize="14"
+            />
+            <!-- Set font size for the label -->
+
+
+        </HorizontalStackLayout>
+
+
+
+        
+        
+
+        <!-- Show the Track Name -->
+        <HorizontalStackLayout Spacing="10" Padding="0,0,0,0" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+
+            <Label 
+            Text="Track Name:" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            TextColor="{DynamicResource Primary}"/>
+
+            <Label 
+                Text="{Binding RecordUserTrackTrackNameXAML}" 
+                VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand"
+                TextColor="{DynamicResource Primary}"/>
+
+        </HorizontalStackLayout>
+
+
+        <!-- Show The Track Time -->
+        <HorizontalStackLayout Spacing="10" Padding="0,0,0,0" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+
+            <Label 
+            Text="Track Time:" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            TextColor="{DynamicResource Primary}"
+            FontSize="14" />
+
+            <Label 
+                Text="{Binding RecordUserTrackTimeXAML}" 
+                VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand"
+                TextColor="{DynamicResource Primary}"
+                FontSize="14" 
+                />
+        </HorizontalStackLayout>
+
+        <!-- Show The Upload Date and Time Section -->
+        <HorizontalStackLayout Spacing="10" Padding="0,0,0,0" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+
+            <Label 
+            Text="Upload:" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            TextColor="{DynamicResource Primary}"
+            FontSize="14" />
+
+            <Label 
+                Text="{Binding RecordUserDateAndTimeXAML}" 
+                VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand"
+                TextColor="{DynamicResource Primary}"
+                FontSize="14" 
+                />
+        </HorizontalStackLayout>
+
+        <!-- Show the User Record Comments -->
+        <VerticalStackLayout Spacing="10" Padding="0,0,0,0" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+
+        <Label 
+            Text="Comments:" 
+            VerticalOptions="Start" 
+            HorizontalOptions="Start"
+            TextColor="{DynamicResource Primary}"  />
+        
+
+        <ScrollView 
+            VerticalOptions="FillAndExpand" 
+            HorizontalOptions="FillAndExpand"
+            Orientation="Vertical">
+
+                <Label 
+                    Text="{Binding RecordUserTrackCommentXAML}" 
+                    VerticalOptions="Start"
+                    HorizontalOptions="FillAndExpand"
+                    TextColor="{DynamicResource Primary}"
+                    FontSize="14" 
+                    LineBreakMode="WordWrap"
+                    MaxLines="7" />
+            
+         </ScrollView>
+
+        </VerticalStackLayout>
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
