@@ -145,12 +145,12 @@ namespace AerobicWithMe.Views
             Console.WriteLine($"----> Number of points on the map!!!: {pointCount}");
         }
         // create random number 
-        public int GenerateRandomNumber()
-        {
-            Random random = new Random();
-            int randomNumber = random.Next(1, 1000); // The upper bound is exclusive, so use 1000 to get numbers from 1 to 999
-            return randomNumber;
-        }
+        //public int GenerateRandomNumber()
+        //{
+        //    Random random = new Random();
+        //    int randomNumber = random.Next(1, 1000); // The upper bound is exclusive, so use 1000 to get numbers from 1 to 999
+        //    return randomNumber;
+        //}
         // method that is used to zoom to my location
         public async Task<Location> GetCurrentLocation()
         {
@@ -203,18 +203,10 @@ namespace AerobicWithMe.Views
 
 
 
-        private void StartExercise_Clicked(object sender, EventArgs e)
-        {
-            Console.WriteLine($"----> StartExercise_Clicked pressed!!!");
-            // Navigate to the singleton instance of TimerPAge
-            var timerPage = TimerPage.Instance;
-            Shell.Current.Navigation.PushAsync(timerPage);
-            //GetCurrentLocation();
 
-        }
 
         [RelayCommand]
-        public async Task ToTimerPage()//transfer to timer page
+        public async Task GoToTimerPageButton_Pressed()//transfer to timer page
         {
             // Navigate to the singleton instance of TimerPage
             var timerPage = TimerPage.Instance;
@@ -224,16 +216,15 @@ namespace AerobicWithMe.Views
 
 
         [RelayCommand]
-        public async Task ZoomToMyLocation()
+        public async Task ZoomToMyLocationButton_Pressed()
         {
-            Console.WriteLine($"----> LogLongitude_Clicked pressed!!!");
             GetCurrentLocation();
 
         }
 
 
         [RelayCommand]
-        public async Task GoToUserRecordsList()
+        public async Task GoToUserRecordsListButton_Pressed()
         {
 
             UserRecordsViewModel userRecordsVM_Page = new UserRecordsViewModel();
@@ -255,7 +246,7 @@ namespace AerobicWithMe.Views
 
         [RelayCommand]
 
-        public async Task DeletLastPoint()
+        public async Task DeletLastPointButton_Pressed()
         {
             List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
 
@@ -267,7 +258,7 @@ namespace AerobicWithMe.Views
 
         [RelayCommand]
 
-        public async Task AddToCloud()
+        public async Task AddToCloudButton_Pressed()
         {
 
             Console.WriteLine($"-->AddToCloud_Clicked ");
@@ -288,7 +279,7 @@ namespace AerobicWithMe.Views
         // calculate the distance between all the points on the map
         [RelayCommand]
 
-        public async Task CalcDistance()
+        public async Task CalcDistanceButton_Pressed()
         {
 
 
@@ -316,7 +307,7 @@ namespace AerobicWithMe.Views
         // remove all the points&polylines from the map 
         [RelayCommand]
 
-        public async Task ResetMap()        {
+        public async Task ResetMapButton_Pressed() {
 
             ClearMap();
 
@@ -326,7 +317,7 @@ namespace AerobicWithMe.Views
         // method that is used to transfer the user to the edit point page
         [RelayCommand]
 
-        public async Task EditPoint()
+        public async Task EditPointButton_Pressed()
         {
             Console.WriteLine($"----> Edit Point clicked ");
 
@@ -351,7 +342,6 @@ namespace AerobicWithMe.Views
 
             if (!_canAddPins) return; // Stop if adding pins is disabled
 
-            //Console.WriteLine($"----> Added Point to screen1");
 
             double latitude = e.Point.Latitude;
             double longitude = e.Point.Longitude;

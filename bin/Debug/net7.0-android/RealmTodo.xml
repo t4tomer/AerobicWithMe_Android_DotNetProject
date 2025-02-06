@@ -525,53 +525,53 @@
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="F:AerobicWithMe.Views.MapPage.toTimerPageCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.ToTimerPageCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.goToTimerPageButton_PressedCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.GoToTimerPageButton_PressedCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.Views.MapPage.ToTimerPageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.ToTimerPage"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.GoToTimerPageButton_PressedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.GoToTimerPageButton_Pressed"/>.</summary>
         </member>
-        <member name="F:AerobicWithMe.Views.MapPage.zoomToMyLocationCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.ZoomToMyLocationCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.zoomToMyLocationButton_PressedCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.ZoomToMyLocationButton_PressedCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.Views.MapPage.ZoomToMyLocationCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.ZoomToMyLocation"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.ZoomToMyLocationButton_PressedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.ZoomToMyLocationButton_Pressed"/>.</summary>
         </member>
-        <member name="F:AerobicWithMe.Views.MapPage.goToUserRecordsListCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.GoToUserRecordsListCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.goToUserRecordsListButton_PressedCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.GoToUserRecordsListButton_PressedCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.Views.MapPage.GoToUserRecordsListCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.GoToUserRecordsList"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.GoToUserRecordsListButton_PressedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.GoToUserRecordsListButton_Pressed"/>.</summary>
         </member>
-        <member name="F:AerobicWithMe.Views.MapPage.deletLastPointCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.DeletLastPointCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.deletLastPointButton_PressedCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.DeletLastPointButton_PressedCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.Views.MapPage.DeletLastPointCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.DeletLastPoint"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.DeletLastPointButton_PressedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.DeletLastPointButton_Pressed"/>.</summary>
         </member>
-        <member name="F:AerobicWithMe.Views.MapPage.addToCloudCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.AddToCloudCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.addToCloudButton_PressedCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.AddToCloudButton_PressedCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.Views.MapPage.AddToCloudCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.AddToCloud"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.AddToCloudButton_PressedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.AddToCloudButton_Pressed"/>.</summary>
         </member>
-        <member name="F:AerobicWithMe.Views.MapPage.calcDistanceCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.CalcDistanceCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.calcDistanceButton_PressedCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.CalcDistanceButton_PressedCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.Views.MapPage.CalcDistanceCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.CalcDistance"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.CalcDistanceButton_PressedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.CalcDistanceButton_Pressed"/>.</summary>
         </member>
-        <member name="F:AerobicWithMe.Views.MapPage.resetMapCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.ResetMapCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.resetMapButton_PressedCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.ResetMapButton_PressedCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.Views.MapPage.ResetMapCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.ResetMap"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.ResetMapButton_PressedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.ResetMapButton_Pressed"/>.</summary>
         </member>
-        <member name="F:AerobicWithMe.Views.MapPage.editPointCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.EditPointCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.editPointButton_PressedCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.EditPointButton_PressedCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.Views.MapPage.EditPointCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.EditPoint"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.EditPointButton_PressedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.EditPointButton_Pressed"/>.</summary>
         </member>
         <member name="T:AerobicWithMe.Views.AddRecordToDb">
             <inheritdoc/>

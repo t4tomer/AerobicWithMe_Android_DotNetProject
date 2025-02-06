@@ -29,7 +29,7 @@
             <Button
                 x:Name="EditPointButton"
                 ImageSource="edit_point.png"
-                Command="{Binding EditPointCommand}"               
+                Command="{Binding EditPointButton_PressedCommand}"               
                 
                 BackgroundColor="Transparent"
                 Padding="30" />
@@ -37,14 +37,14 @@
             <Button
                 x:Name="ClearMapButton"
                 ImageSource="clear.png"
-                Command="{Binding ResetMapCommand}"               
+                Command="{Binding ResetMapButton_PressedCommand}"               
                 BackgroundColor="Transparent"
                 Padding="0" />
 
             <Button
                 x:Name="DistanceButton"
                 ImageSource="distance.png"
-                Command="{Binding CalcDistanceCommand}"
+                Command="{Binding CalcDistanceButton_PressedCommand}"
                 BackgroundColor="Transparent"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
                 AbsoluteLayout.LayoutBounds="0.42, 1.0, AutoSize, AutoSize" />
@@ -53,7 +53,7 @@
             <Button
                 x:Name="AddToCloudButton"
                 ImageSource="to_cloud.png"
-                Command="{Binding AddToCloudCommand}"                       
+                Command="{Binding AddToCloudButton_PressedCommand}"                       
 
                 BackgroundColor="Transparent"
                 Padding="10" />
@@ -68,7 +68,7 @@
             x:Name="DeleteLastPointButton"
             ImageSource="back.png"
             BackgroundColor="Transparent"
-            Command="{Binding DeletLastPointCommand}"                       
+            Command="{Binding  DeletLastPointButton_PressedCommand}"                       
             AbsoluteLayout.LayoutFlags="PositionProportional"
             AbsoluteLayout.LayoutBounds="0.42, 1.0, AutoSize, AutoSize" />
 
@@ -77,7 +77,7 @@
         <Button
             x:Name="ZoomButton"
             ImageSource="zoom.png"
-            Command="{Binding ZoomToMyLocationCommand}" 
+            Command="{Binding ZoomToMyLocationButton_PressedCommand}" 
             
             BackgroundColor="Transparent"
             AbsoluteLayout.LayoutFlags="PositionProportional"
@@ -87,7 +87,7 @@
             x:Name="StartExcericeButton"
             ImageSource="start_excerice2.png"
             BackgroundColor="Transparent"
-             Command="{Binding ToTimerPageCommand}" 
+             Command="{Binding GoToTimerPageButton_PressedCommand}" 
             AbsoluteLayout.LayoutFlags="PositionProportional"
             AbsoluteLayout.LayoutBounds="0.62, 1.0, AutoSize, AutoSize" />
 
@@ -95,7 +95,7 @@
             x:Name="UsersRecordsButton"
             ImageSource="records_of_users.png"
             BackgroundColor="Transparent"
-             Command="{Binding GoToUserRecordsListCommand}" 
+             Command="{Binding GoToUserRecordsListButton_PressedCommand}" 
             AbsoluteLayout.LayoutFlags="PositionProportional"
             AbsoluteLayout.LayoutBounds="0.81, 1.0, AutoSize, AutoSize" />
 
