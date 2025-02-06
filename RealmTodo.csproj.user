@@ -34,12 +34,6 @@
     <MauiXaml Update="Views\MapSettings\MapPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\PropertyTriggerXaml.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Views\TestPage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
     <MauiXaml Update="Views\UserRecords\AddRecordToDb.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

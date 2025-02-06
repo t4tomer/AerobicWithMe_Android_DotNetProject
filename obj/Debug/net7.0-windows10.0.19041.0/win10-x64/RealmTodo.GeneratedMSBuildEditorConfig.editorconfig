@@ -84,18 +84,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.MapSet
 build_metadata.AdditionalFiles.TargetPath = Views\MapSettings\MapPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MapSettings\MapPage.xaml
 
-[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/PropertyTriggerXaml.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.PropertyTriggerXaml.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\PropertyTriggerXaml.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\PropertyTriggerXaml.xaml
-
-[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/TestPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.TestPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\TestPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\TestPage.xaml
-
 [D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/UserRecords/AddRecordToDb.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.UserRecords.AddRecordToDb.xaml

@@ -143,12 +143,6 @@
 		<MauiXaml Update="Views\NewEditItemPage.xaml">
 		  <SubType></SubType>
 		</MauiXaml>
-		<MauiXaml Update="Views\PropertyTriggerXaml.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Views\TestPage.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
 		<MauiXaml Update="Views\UserRecords\AddRecordToDb.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
