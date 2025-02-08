@@ -120,7 +120,7 @@ namespace AerobicWithMe.Services
         public static Realm GetRealm()
         {
 
-            var singleton = ObjectSingleton.Instance;
+            var singleton = TypeFactory.Instance;
             
             // Default type
             Console.WriteLine($"Default type: {singleton.GetCurrentType().Name}");

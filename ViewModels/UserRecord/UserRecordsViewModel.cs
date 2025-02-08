@@ -64,7 +64,7 @@ namespace AerobicWithMe.ViewModels
         {
 
             //set singlton to userrecord 
-            var singleton = ObjectSingleton.Instance;
+            var singleton = TypeFactory.Instance;
             singleton.SetUserRecordType();
 
             realm = RealmService.GetMainThreadRealm();
@@ -183,7 +183,7 @@ namespace AerobicWithMe.ViewModels
             Console.WriteLine($"----> SelectedSortOption value :{SelectedSortOption}");
             //OnSelectedSortOptionChanged(selectedSortOption);//Show List by sorting the records
             // Set the singleton object to UserRecord type
-            var singleton = ObjectSingleton.Instance;
+            var singleton = TypeFactory.Instance;
             singleton.SetUserRecordType();
             realm = RealmService.GetMainThreadRealm();
 
@@ -478,7 +478,7 @@ namespace AerobicWithMe.ViewModels
         [RelayCommand]
         public void SortUserRecords()
         {
-            var singleton = ObjectSingleton.Instance;
+            var singleton = TypeFactory.Instance;
             singleton.SetUserRecordType();
             realm = RealmService.GetMainThreadRealm();
 

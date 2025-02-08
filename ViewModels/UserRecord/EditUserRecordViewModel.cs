@@ -64,7 +64,7 @@ namespace AerobicWithMe.ViewModels
         public EditUserRecordViewModel()
         {
             Console.WriteLine($"----> empty constructor,EditMapPinViewModel");
-            var singleton = ObjectSingleton.Instance;
+            var singleton = TypeFactory.Instance;
             singleton.SetUserRecordType();
 
             var realm = RealmService.GetMainThreadRealm();
@@ -121,7 +121,7 @@ namespace AerobicWithMe.ViewModels
             string InputUploadDateTime = newUserRecord.UploadDateTime;
             string InputCommentText = newUserRecord.Comment;
 
-            var singleton = ObjectSingleton.Instance;
+            var singleton = TypeFactory.Instance;
             singleton.SetUserRecordType();
 
             var realm = RealmService.GetMainThreadRealm();

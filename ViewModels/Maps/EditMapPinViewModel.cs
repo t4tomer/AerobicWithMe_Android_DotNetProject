@@ -223,7 +223,7 @@ namespace AerobicWithMe.ViewModels
         {
             Console.WriteLine($"SavePin EditMapPin -->'{newPin.Label}': {newPin.Address}");
 
-            var singleton = ObjectSingleton.Instance;
+            var singleton = TypeFactory.Instance;
             singleton.SetMapPinType();
 
 

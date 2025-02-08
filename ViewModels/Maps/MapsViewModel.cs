@@ -74,7 +74,7 @@ namespace AerobicWithMe.ViewModels
         public MapsViewModel()
         {
             //set singlton to mappin 
-            var singleton = ObjectSingleton.Instance;
+            var singleton = TypeFactory.Instance;
             singleton.SetMapPinType();
 
             realm = RealmService.GetMainThreadRealm();
@@ -129,7 +129,7 @@ namespace AerobicWithMe.ViewModels
             timer.ResetTimer();
 
             //set the singlton object to mappin type 
-            var singleton = ObjectSingleton.Instance;
+            var singleton = TypeFactory.Instance;
             singleton.SetMapPinType();
             realm = RealmService.GetMainThreadRealm();
 
@@ -186,7 +186,7 @@ namespace AerobicWithMe.ViewModels
         {// used for testing 
             Console.WriteLine($"SaveUserRecord EditUserRecord -->");
 
-            var singleton = ObjectSingleton.Instance;
+            var singleton = TypeFactory.Instance;
             singleton.SetUserRecordType();
 
 
@@ -457,7 +457,7 @@ namespace AerobicWithMe.ViewModels
             UserRecordsViewModel deleteUseres = new UserRecordsViewModel();
 
             //set singlton to UserRecord 
-            var singleton = ObjectSingleton.Instance;
+            var singleton = TypeFactory.Instance;
             singleton.SetUserRecordType();
             realm = RealmService.GetMainThreadRealm();
 
