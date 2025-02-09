@@ -101,9 +101,6 @@
 		<None Remove="atlasConfig.json" />
 	</ItemGroup>
 	<ItemGroup>
-		<Folder Include="Services\" />
-	</ItemGroup>
-	<ItemGroup>
 		<MauiXaml Update="Views\UserRecords\UserDetails.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>

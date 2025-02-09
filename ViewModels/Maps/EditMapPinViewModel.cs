@@ -218,7 +218,7 @@ namespace AerobicWithMe.ViewModels
         }
 
 
-        [RelayCommand]
+        //[RelayCommand]
         public async Task SavePin(Maui.GoogleMaps.Pin newPin)
         {
             Console.WriteLine($"SavePin EditMapPin -->'{newPin.Label}': {newPin.Address}");

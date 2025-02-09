@@ -1,9 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using AerobicWithMe.Services;
+using System.Threading.Tasks;
 
 namespace AerobicWithMe.ViewModels
 {
-    public partial class LoginViewModel : BaseViewModel
+    public partial class LoginViewModel : BaseViewModel, LoginInterface
     {
         public string Email { get; set; }
 
@@ -42,7 +43,7 @@ namespace AerobicWithMe.ViewModels
             await DoSignup();
         }
 
-        private async Task DoLogin()
+        public async Task DoLogin()
         {
             try
             {
@@ -60,7 +61,7 @@ namespace AerobicWithMe.ViewModels
             await GoToMainPage();
         }
 
-        private async Task DoSignup()
+        public async Task DoSignup()
         {
             try
             {
@@ -78,7 +79,7 @@ namespace AerobicWithMe.ViewModels
             await DoLogin();
         }
 
-        private async Task<bool> VeryifyEmailAndPassword()
+        public async Task<bool> VeryifyEmailAndPassword()
         {
             if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
             {
@@ -89,7 +90,7 @@ namespace AerobicWithMe.ViewModels
             return true;
         }
 
-        private async Task GoToMainPage()
+        public async Task GoToMainPage()
         {
             //await Shell.Current.GoToAsync($"//items");
             await Shell.Current.GoToAsync($"//maps");

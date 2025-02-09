@@ -34,6 +34,7 @@ color;D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\lp\164\jl\re
 color;D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\lp\167\jl\res\values\values.xml
 color;obj\Debug\net7.0-android\res\values\colors.xml
 color;obj\Debug\net7.0-android\resizetizer\sp\values\maui_colors.xml
+com.google.android.material.appbar.AppBarLayout;D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\lp\161\jl\res\layout\flyoutcontent.xml
 com.google.android.material.appbar.AppBarLayout;D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\lp\161\jl\res\layout\flyoutcontent.xml
 com.google.android.material.appbar.AppBarLayout;D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\lp\161\jl\res\layout\shellcontent.xml
 com.google.android.material.appbar.AppBarLayout;D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\lp\164\jl\res\layout\navigationlayout.xml
@@ -41,6 +42,7 @@ com.google.android.material.appbar.MaterialToolbar;D:\GitHub\RealmExamples\Realm
 com.google.android.material.tabs.TabLayout;D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\lp\162\jl\res\layout\tabbar.xml
 corners;D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\lp\167\jl\res\drawable\common_google_signin_btn_icon_disabled.xml
 corners;D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\lp\167\jl\res\drawable\common_google_signin_btn_text_disabled.xml
+crc640ec207abc449b2ca.ShellFlyoutLayout;D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\lp\161\jl\res\layout\flyoutcontent.xml
 declare-styleable;D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\lp\162\jl\res\values\attrs.xml
 declare-styleable;D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\lp\164\jl\res\values\attr.xml
 declare-styleable;D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\lp\167\jl\res\values\values.xml

@@ -168,7 +168,6 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
         </member>
         <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.InitialMapPin">
             <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.initialMapPin"/>
@@ -211,12 +210,6 @@
         </member>
         <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadToCloudPinsCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadToCloudPins"/>.</summary>
-        </member>
-        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.savePinCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.SavePinCommand"/>.</summary>
-        </member>
-        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.SavePinCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.SavePin(Maui.GoogleMaps.Pin)"/>.</summary>
         </member>
         <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.cancelCommand">
             <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.CancelCommand"/>.</summary>
