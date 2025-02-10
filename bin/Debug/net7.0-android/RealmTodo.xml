@@ -193,11 +193,11 @@
         <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.PageHeader">
             <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.pageHeader"/>
         </member>
-        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.showTrackCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.ShowTrackCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel._addPointsToTrackCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.addPointsToTrackCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.ShowTrackCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.ShowTrack"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.addPointsToTrackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.addPointsToTrack"/>.</summary>
         </member>
         <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.printListCommand">
             <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.PrintListCommand"/>.</summary>

@@ -35,7 +35,7 @@
             Text="Show Track"
             FontSize="12" 
             Padding="5,0,5,10"        
-            Command="{Binding ShowTrackCommand}" />
+            Command="{Binding addPointsToTrackCommand}" />
 
 
 

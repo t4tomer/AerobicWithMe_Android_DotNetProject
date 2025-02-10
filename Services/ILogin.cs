@@ -2,7 +2,7 @@
 
 namespace AerobicWithMe.Services
 {
-    public interface LoginInterface
+    public interface ILogin
     {
         Task OnAppearing();
         Task Login();

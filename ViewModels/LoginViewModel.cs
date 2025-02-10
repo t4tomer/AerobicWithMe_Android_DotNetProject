@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace AerobicWithMe.ViewModels
 {
-    public partial class LoginViewModel : BaseViewModel, LoginInterface
+    public partial class LoginViewModel : BaseViewModel, ILogin
     {
         public string Email { get; set; }
 

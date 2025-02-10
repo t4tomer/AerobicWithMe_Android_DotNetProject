@@ -337,7 +337,7 @@ namespace AerobicWithMe.ViewModels
 
             var mapPage = MapPage.Instance;
             mapPage.setPinsList(pinListOfSameMapName);
-            mapPage.ShowTrack_Clicked();
+            mapPage.addPointsToTrack_Clicked();
             mapPage.SetTitle(mapName);
             if (await mapPage.IsLocationEnabled())
             {

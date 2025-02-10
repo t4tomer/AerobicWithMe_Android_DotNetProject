@@ -29,7 +29,7 @@ namespace AerobicWithMe.Views
         private static MapPage _instance; // Singleton instance
         private CancellationTokenSource _cancelTokenSource;
         private bool _isCheckingLocation;
-        private MapHelper MapHelperObject; // Declare m as a class-level variable
+        private MapUtility MapHelperObject; // Declare m as a class-level variable
         List<Maui.GoogleMaps.Pin> pinsList;// the list of pins in the map
         public bool _canAddPins = true; // Controls if pins can be added
         private string _mapTitle = ""; // Default value
@@ -268,7 +268,7 @@ namespace AerobicWithMe.Views
             int pinCount = pinsList.Count;
             if (await EnoughPins(pinCount))
             {
-                MapHelperObject = new MapHelper(pinsList, myMap);
+                MapHelperObject = new MapUtility(pinsList, myMap);
                 //MapHelperObject.PrintPinAddresses();// used for testing
                 var AddToCloud = new AddMapToDbPage(pinsList, myMap);
                 await Navigation.PushAsync(AddToCloud);
@@ -370,7 +370,7 @@ namespace AerobicWithMe.Views
             myMap.Pins.Add(pin);
             List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
 
-            MapHelperObject = new MapHelper(pinsList, myMap); 
+            MapHelperObject = new MapUtility(pinsList, myMap); 
             MapHelperObject.drawLineBetweenAllPins(strokeColorPolyline);
 
         }
@@ -422,13 +422,13 @@ namespace AerobicWithMe.Views
 
 
 
-        public void ShowTrack_Clicked()//show the pins and the lines of the track 
+        public void addPointsToTrack_Clicked()//show the pins and the lines of the track 
         {
 
             ClearMap();//clear the map from previus pins 
 
-            MapHelperObject = new MapHelper(pinsList, myMap);
-            MapHelperObject.showTrackOnMap();//show the pins on the map .
+            MapHelperObject = new MapUtility(pinsList, myMap);
+            MapHelperObject.addPointsToTrackOnMap();//show the pins on the map .
             MapHelperObject.drawLineBetweenAllPins(strokeColorPolyline);//draw line between all the pins of the map .
 
         }

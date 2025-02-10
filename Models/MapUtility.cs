@@ -3,36 +3,36 @@ using Maui.GoogleMaps;
 using Microsoft.Maui.Devices.Sensors;
 using Microsoft.Maui.Maps;
 using Position = Maui.GoogleMaps.Position;
+using AerobicWithMe.Services;
 
 //object that is used for saving methods that are used for map page.
 
-
 namespace AerobicWithMe.Models
 {
-    public  class MapHelper
+    public  class MapUtility: IMapUtility
     {
 
         List<Maui.GoogleMaps.Pin> pinsList;// the list of pins in the map
         Maui.GoogleMaps.Map myMap;
 
-        public MapHelper()
+        public MapUtility()
         {
             Console.WriteLine($"----> empty constructor MapHelper");
          
         }
-        public MapHelper(List<Pin> pinsList)
+        public MapUtility(List<Pin> pinsList)
         {
             this.pinsList = pinsList;
         }
 
-        public MapHelper( Maui.GoogleMaps.Map newMyMap)
+        public MapUtility( Maui.GoogleMaps.Map newMyMap)
         {
             
             this.myMap = newMyMap;
         }
 
 
-        public MapHelper(List<Pin> NewPinsList, Maui.GoogleMaps.Map newMyMap)
+        public MapUtility(List<Pin> NewPinsList, Maui.GoogleMaps.Map newMyMap)
         {
             Console.WriteLine($"---->  constructor -MapHelper(PinsList,myMap)");
 
@@ -47,14 +47,12 @@ namespace AerobicWithMe.Models
         }
 
 
-        public void showTrack()
+        public void addPointsToTrack()
         {
             foreach (var pin in pinsList)
             {
-                // Assuming each pin has a 'Label' property that holds the summary
-                Console.WriteLine($"Pin Summary: {pin.Label}");
+                //Console.WriteLine($"Pin Summary: {pin.Label}");
                 myMap.Pins.Add(pin);
-
             }
         }
 
@@ -76,7 +74,7 @@ namespace AerobicWithMe.Models
 
 
 
-        public void showTrackOnMap() //used to show the pins on the map 
+        public void addPointsToTrackOnMap() //used to show the pins on the map 
         {
             foreach (var pin in pinsList)
             {
@@ -91,51 +89,6 @@ namespace AerobicWithMe.Models
         {
             this.pinsList=newpinstList;
         }
-
-        //method used for testing-print pin address
-        /*
-        public void PrintPinAddresses()
-        {
-            if (pinsList != null)
-            {
-                int pinCount = pinsList.Count;
-                Console.WriteLine($"number of pins in the list(PrintPinAddresses): -->'{pinCount}");
-
-                foreach (var pin in pinsList)
-                {
-                    Console.WriteLine($"PrintPinAddresses -->'{pin.Label}': {pin.Address}");
-                }
-            }
-            else
-            {
-                Console.WriteLine("pinsList is null in PrintPinAddresses(PrintPinAddresses)");
-            }
-        }
-
-
-               public void PrintPinAddresses(object sender, MapClickedEventArgs e)
-        {
-            var pins = pinsList;
-            foreach (var pin in pins)
-            {
-                Console.WriteLine($"Address of pin (MapHelper class) -->'{pin.Label}': {pin.Address}");
-            }
-        }
-
-
-
-        */
-
-
-
-
-
-
-
-
-
-
-
         public void drawLineBetweenAllPins(int strokeColorPolyline)
         {
             switch (pinsList)
@@ -613,25 +566,6 @@ namespace AerobicWithMe.Models
             return roundedDistance;
         }
 
-
-     // Add new point on the map -used for testing 
-     /*
-        public static void OnMapClicked666(object sender, MapClickedEventArgs e, Maui.GoogleMaps.Map myMap)
-        {
-            Console.WriteLine($"----> Pressed the screen666 ");
-
-            var pin = new Pin
-            {
-                Label = "New Pin",
-                Address = "Custom Address",
-                Position = e.Point,
-                Type = PinType.Place
-            };
-
-            myMap.Pins.Add(pin);
-        }
-
-        */
 
 
       

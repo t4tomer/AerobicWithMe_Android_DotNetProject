@@ -55,11 +55,11 @@ namespace AerobicWithMe.ViewModels
 
         List<Maui.GoogleMaps.Pin> pinsList;// the list of pins in the map
         private Maui.GoogleMaps.Map myMap;
-        private MapHelper MapHelperObject; // OBEJECT   THAT is used to show track of map
+        private MapUtility MapHelperObject; // OBEJECT   THAT is used to show track of map
         public EditMapPinViewModel()
         {
             Console.WriteLine($"----> empty constructor,EditMapPinViewModel");
-            MapHelperObject = new MapHelper(); // Initialize m in the constructor
+            MapHelperObject = new MapUtility(); // Initialize m in the constructor
 
 
 
@@ -101,7 +101,7 @@ namespace AerobicWithMe.ViewModels
 
         //Show the track of pins that are stored in realm db 
         [RelayCommand]
-        public async Task ShowTrack()
+        public async Task addPointsToTrack()
         {
 
             string trackName = InitialMapPin.Mapname;
@@ -134,7 +134,7 @@ namespace AerobicWithMe.ViewModels
             var mapPage = MapPage.Instance;
             List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
             mapPage.setPinsList(summaries);
-            mapPage.ShowTrack_Clicked();
+            mapPage.addPointsToTrack_Clicked();
 
             if (await mapPage.IsLocationEnabled())
             {

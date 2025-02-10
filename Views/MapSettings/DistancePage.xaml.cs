@@ -31,7 +31,7 @@ namespace AerobicWithMe.Views
             }
         }
 
-        public DistancePage(double totalDistance, List<Maui.GoogleMaps.Pin> pinsList, MapHelper MapHelperObject)
+        public DistancePage(double totalDistance, List<Maui.GoogleMaps.Pin> pinsList, MapUtility MapHelperObject)
         {
             InitializeComponent();
 
