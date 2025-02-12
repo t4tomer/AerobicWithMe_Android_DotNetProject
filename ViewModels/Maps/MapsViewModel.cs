@@ -410,37 +410,32 @@ namespace AerobicWithMe.ViewModels
 
         // used to delete map from the maps view 
         [RelayCommand]
-        public async Task DeleteMap(MapPin pinOfChoseMap)
+        public async Task DeleteMap(MapPin pinOfChosenMap)
         {
 
-            string trackNameToDelete = pinOfChoseMap.Mapname;
+            string trackNameToDelete = pinOfChosenMap.Mapname;
 
 
-            if (!await CheckMapOwnership(pinOfChoseMap))
+
+
+            if (!await CheckMapOwnership(pinOfChosenMap))
             {
                 return;
             }
 
 
-            if (!await WarningDeletingMyTrack(pinOfChoseMap))
+            if (!await WarningDeletingMyTrack(pinOfChosenMap))
             {
                 return;
             }
 
 
 
+            List<Maui.GoogleMaps.Pin> pinsList = MapPage.Instance.GetPinList();
+            Track remove_Track = new Track(trackNameToDelete, pinsList);//create new Track object
+            await remove_Track.DeleteTrackFromMongoDb(pinOfChosenMap);
 
-            // Query all MapPin objects with the same mapname
-            var mapToDelete = realm.All<MapPin>()
-                .Where(track => track.Mapname == trackNameToDelete)
-                .ToList();
-
-            //delete each pin of the map 
-            foreach (var pinsInMap in mapToDelete)
-            {
-                await DeleteSinglePin(pinsInMap);
-            }
-
+ 
             await DeleteUsersOfTrack(trackNameToDelete);
 
 

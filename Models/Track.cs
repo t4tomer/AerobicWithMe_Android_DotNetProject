@@ -13,6 +13,7 @@ using Position = Maui.GoogleMaps.Position;
 using AerobicWithMe.Views; // Correct namespace for TestPage
 
 using Realms.Sync;
+using Realms;
 
 
 namespace AerobicWithMe.Services
@@ -48,6 +49,60 @@ namespace AerobicWithMe.Services
                 await SavePin(pin);
             }
         }
+
+
+
+        public async Task DeleteTrackFromMongoDb(MapPin pinOfChoseMap)
+        {
+
+            string trackNameToDelete = pinOfChoseMap.Mapname;
+
+            var singleton = TypeFactory.Instance;
+            singleton.SetMapPinType();
+
+
+            var realm = RealmService.GetMainThreadRealm();
+
+
+
+
+
+            // Query all MapPin objects with the same mapname
+            var mapToDelete = realm.All<MapPin>()
+                .Where(track => track.Mapname == trackNameToDelete)
+                .ToList();
+
+            //delete each pin of the map 
+            foreach (var pinsInMap in mapToDelete)
+            {
+                await DeleteSinglePin(pinsInMap);
+            }
+
+
+
+
+
+
+
+        }
+
+        public async Task DeleteSinglePin(MapPin pin)
+        {
+
+            var singleton = TypeFactory.Instance;
+            singleton.SetMapPinType();
+
+
+            var realm = RealmService.GetMainThreadRealm();
+
+            await realm.WriteAsync(() =>
+            {
+                realm.Remove(pin);
+            });
+
+        }
+
+
 
 
         public async Task SavePin(Maui.GoogleMaps.Pin newPin)
