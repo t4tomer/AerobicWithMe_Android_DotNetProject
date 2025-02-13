@@ -1,155 +1,121 @@
 ﻿using Maui.GoogleMaps;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AerobicWithMe.Models;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using AerobicWithMe.Models;
 using AerobicWithMe.Services;
-using AerobicWithMe.ViewModels;
-
-using Position = Maui.GoogleMaps.Position;
-using AerobicWithMe.Views; // Correct namespace for TestPage
-
-using Realms.Sync;
 using Realms;
-
 
 namespace AerobicWithMe.Services
 {
-    public class Track
+    // Observer Interface
+    public interface ITrackObserver
     {
+        void OnTrackUpdated(Track track);
+    }
 
-        // Private field to store the pins list
+    // Subject Interface
+    public interface ITrackSubject
+    {
+        void Attach(ITrackObserver observer);
+        void Detach(ITrackObserver observer);
+        void Notify();
+    }
+
+    public class Track : ITrackSubject
+    {
+        private List<ITrackObserver> _observers = new List<ITrackObserver>();
+
         private List<Maui.GoogleMaps.Pin> _pinsList;
         private string _inputTrackName;
-        private MapPin initialMapPin;
 
-
-        // Public property with getter and setter for the pins list
         public List<Maui.GoogleMaps.Pin> PinsList
         {
-            get => _pinsList;  // Getter returns the current list
-            set => _pinsList = value; // Setter assigns the provided list
-        }
-
-        // Constructor to initialize MongoDB collection
-        public Track(string NewInputTrackName, List<Maui.GoogleMaps.Pin> NewPinsList)
-        {
-            _pinsList = NewPinsList;
-            _inputTrackName = NewInputTrackName;
-        }
-
-        public async Task UploadToMongoDb()
-        {
-            foreach (var pin in _pinsList)
+            get => _pinsList;
+            set
             {
-                Console.WriteLine($"PrintPinAddresses -->'{pin.Label}': {pin.Address}");
-                await SavePin(pin);
+                _pinsList = value;
+                Notify(); // Notify observers when the list changes
             }
         }
 
+        public Track(string newInputTrackName, List<Maui.GoogleMaps.Pin> newPinsList)
+        {
+            _inputTrackName = newInputTrackName;
+            _pinsList = newPinsList;
+        }
 
+        public void Attach(ITrackObserver observer)
+        {
+            _observers.Add(observer);
+            Console.WriteLine("Observer attached.");
+        }
 
-        public async Task DeleteTrackFromMongoDb(MapPin pinOfChoseMap)
+        public void Detach(ITrackObserver observer)
+        {
+            _observers.Remove(observer);
+            Console.WriteLine("Observer detached.");
+        }
+
+        public void Notify()
+        {
+            Console.WriteLine("Notifying observers...");
+            foreach (var observer in _observers)
+            {
+                observer.OnTrackUpdated(this);
+            }
+            //return the tracks page
+            Shell.Current.GoToAsync("..");
+
+        }
+
+        public async Task AddTrack()
+        {
+            foreach (var pin in _pinsList)
+            {
+                Console.WriteLine($"Uploading Pin -->'{pin.Label}': {pin.Address}");
+                await SavePin(pin);
+            }
+
+            Notify(); // Notify observers after upload
+        }
+
+        public async Task RemoveTrack(MapPin pinOfChoseMap)
         {
 
             string trackNameToDelete = pinOfChoseMap.Mapname;
 
             var singleton = TypeFactory.Instance;
             singleton.SetMapPinType();
-
-
             var realm = RealmService.GetMainThreadRealm();
 
-
-
-
-
-            // Query all MapPin objects with the same mapname
             var mapToDelete = realm.All<MapPin>()
                 .Where(track => track.Mapname == trackNameToDelete)
                 .ToList();
 
-            //delete each pin of the map 
-            foreach (var pinsInMap in mapToDelete)
+            foreach (var pin in mapToDelete)
             {
-                await DeleteSinglePin(pinsInMap);
+                await DeleteSinglePin(pin);
             }
 
-
-
-
-
-
-
+            Notify(); // Notify observers after deletion
         }
 
-        public async Task DeleteSinglePin(MapPin pin)
+        private async Task DeleteSinglePin(MapPin pin)
         {
-
             var singleton = TypeFactory.Instance;
             singleton.SetMapPinType();
 
-
             var realm = RealmService.GetMainThreadRealm();
-
-            await realm.WriteAsync(() =>
-            {
-                realm.Remove(pin);
-            });
-
+            await realm.WriteAsync(() => realm.Remove(pin));
         }
 
-
-
-
-        public async Task SavePin(Maui.GoogleMaps.Pin newPin)
+        private async Task SavePin(Maui.GoogleMaps.Pin newPin)
         {
-            Console.WriteLine($"SavePin EditMapPin -->'{newPin.Label}': {newPin.Address}");
-
-            var singleton = TypeFactory.Instance;
-            singleton.SetMapPinType();
-
-
             var realm = RealmService.GetMainThreadRealm();
-
-
-
-            var mapPinSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "DogSubscription");
-
-            if (!mapPinSubscriptionExists)
-            {
-                Console.WriteLine("No existing subscription for MapPin. Adding one now...");
-
-                // Add the subscription synchronously
-                realm.Subscriptions.Update(() =>
-                {
-                    var mapPinQuery = realm.All<MapPin>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
-                    realm.Subscriptions.Add(mapPinQuery, new SubscriptionOptions { Name = "TrackSubscription" });
-                });
-
-                Console.WriteLine("MapPin subscription added. Waiting for synchronization...");
-
-                // Wait for synchronization
-                await realm.Subscriptions.WaitForSynchronizationAsync();
-                Console.WriteLine("MapPin synchronized successfully.");
-            }
-            else
-            {
-                Console.WriteLine("MapPin subscription already exists.");
-            }
-
-
-
-
-
-
             await realm.WriteAsync(() =>
             {
-
-                
                 realm.Add(new MapPin()
                 {
                     OwnerId = RealmService.CurrentUser.Id,
@@ -159,16 +125,18 @@ namespace AerobicWithMe.Services
                     Latitude = newPin.Position.Latitude.ToString(),
                     Longitude = newPin.Position.Longitude.ToString()
                 });
-                
             });
 
-
-
-
-            Console.WriteLine($"To view your data in Atlas, use this link: {RealmService.DataExplorerLink}");
-            await Shell.Current.GoToAsync("..");
+            Notify(); // Notify observers after saving a pin
         }
     }
 
-
+    // Concrete Observer
+    public class TrackLogger : ITrackObserver
+    {
+        public void OnTrackUpdated(Track track)
+        {
+            Console.WriteLine("Track Updated: " + track.PinsList.Count + " pins.");
+        }
+    }
 }

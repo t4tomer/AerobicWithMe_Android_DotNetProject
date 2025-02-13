@@ -200,9 +200,20 @@ namespace AerobicWithMe.ViewModels
 
             List<Maui.GoogleMaps.Pin> pinsList = MapPage.Instance.GetPinList();
 
-            Track new_Track = new Track(InputTrackName, pinsList);//create new Track object
-            await new_Track.UploadToMongoDb();
+            //Track new_Track = new Track(InputTrackName, pinsList);//create new Track object
+            //await new_Track.AddTrack();
 
+            //observor desighn pattern 
+
+            Track addNewTrack = new Track(InputTrackName, pinsList);
+            var logger = new TrackLogger();
+
+            // Attach observer
+            addNewTrack.Attach(logger);
+            await addNewTrack.AddTrack();
+
+            // Detach observer when not needed
+            addNewTrack.Detach(logger);
 
         }
 

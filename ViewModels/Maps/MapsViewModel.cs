@@ -431,11 +431,26 @@ namespace AerobicWithMe.ViewModels
 
 
 
-            List<Maui.GoogleMaps.Pin> pinsList = MapPage.Instance.GetPinList();
-            Track remove_Track = new Track(trackNameToDelete, pinsList);//create new Track object
-            await remove_Track.DeleteTrackFromMongoDb(pinOfChosenMap);
+            //List<Maui.GoogleMaps.Pin> pinsList = MapPage.Instance.GetPinList();
+            //Track remove_Track = new Track(trackNameToDelete, pinsList);//create new Track object
+            //await remove_Track.RemoveTrack(pinOfChosenMap);
 
- 
+
+
+            //observor desighn pattern 
+            List<Maui.GoogleMaps.Pin> pinsList = MapPage.Instance.GetPinList();
+
+            Track removeExistingTrack = new Track(trackNameToDelete, pinsList);
+            var logger = new TrackLogger();
+
+            // Attach observer
+            removeExistingTrack.Attach(logger);
+            await removeExistingTrack.RemoveTrack(pinOfChosenMap);
+
+
+            // Detach observer when not needed
+            removeExistingTrack.Detach(logger);
+
             await DeleteUsersOfTrack(trackNameToDelete);
 
 
