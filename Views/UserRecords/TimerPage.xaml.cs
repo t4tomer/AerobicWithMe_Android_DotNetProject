@@ -65,7 +65,7 @@ namespace AerobicWithMe.Views
         }
 
         // Public static property to get the singleton instance
-        public static TimerPage Instance
+        public static TimerPage GetInstance
         {
             get
             {

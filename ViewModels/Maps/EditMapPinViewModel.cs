@@ -130,8 +130,8 @@ namespace AerobicWithMe.ViewModels
 
 
             // Navigate to the singleton instance of MapPage
-            var mapPage = MapPage.Instance;
-            List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
+            var mapPage = MapPage.GetInstance;
+            List<Maui.GoogleMaps.Pin> pinList = MapPage.GetInstance.GetPinList();
             mapPage.setPinsList(summaries);
             mapPage.addPointsToTrack_Clicked();
 
@@ -169,14 +169,14 @@ namespace AerobicWithMe.ViewModels
         public async Task PrintList()
         {
             Console.WriteLine("PrintList --EditItemViewModel.");
-            if (MapPage.Instance == null)
+            if (MapPage.GetInstance == null)
                 Console.WriteLine("MapPage instance is null.");
             else
-                Console.WriteLine($"MapPage instance initialized with {MapPage.Instance.GetPinList().Count} pins.");
+                Console.WriteLine($"MapPage instance initialized with {MapPage.GetInstance.GetPinList().Count} pins.");
 
 
 
-            List<Maui.GoogleMaps.Pin> pinsList1 = MapPage.Instance.GetPinList();
+            List<Maui.GoogleMaps.Pin> pinsList1 = MapPage.GetInstance.GetPinList();
 
         }
 
@@ -198,7 +198,7 @@ namespace AerobicWithMe.ViewModels
 
 
 
-            List<Maui.GoogleMaps.Pin> pinsList = MapPage.Instance.GetPinList();
+            List<Maui.GoogleMaps.Pin> pinsList = MapPage.GetInstance.GetPinList();
 
             //Track new_Track = new Track(InputTrackName, pinsList);//create new Track object
             //await new_Track.AddTrack();

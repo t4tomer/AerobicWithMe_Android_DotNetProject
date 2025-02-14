@@ -4571,8 +4571,6 @@ D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-
 D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\RealmTodo.AssemblyInfo.cs
 D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\RealmTodo.csproj.CoreCompileInputs.cache
 D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\RealmTodo.sourcelink.json
-D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\RealmTodo.csproj.Fody.CopyLocal.cache
-D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\RealmTodo.csproj.Fody.RuntimeCopyLocal.cache
 D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\XamlC.stamp
 D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\RealmTodo.dll
 D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\RealmTodo.pdb
@@ -5527,3 +5525,10 @@ D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-
 D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\stamp\_GenerateJavaStubs.stamp
 D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\stamp\_GeneratePackageManagerJava.stamp
 D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\stamp\_ResolveLibraryProjectImports.stamp
+D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\down_arrow.png
+D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\down_arrow.png
+D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\down_arrow.png
+D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\down_arrow.png
+D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\down_arrow.png
+D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\RealmTodo.csproj.Fody.CopyLocal.cache
+D:\GitHub\AerobicWithMeApp\AerobicWithMe_Android_DotNetProject\obj\Debug\net7.0-android\RealmTodo.csproj.Fody.RuntimeCopyLocal.cache

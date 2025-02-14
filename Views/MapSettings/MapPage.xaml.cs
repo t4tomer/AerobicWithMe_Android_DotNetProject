@@ -47,7 +47,7 @@ namespace AerobicWithMe.Views
         }
 
         // Public static property to get the singleton instance
-        public static MapPage Instance
+        public static MapPage GetInstance
         {
             get
             {
@@ -209,7 +209,7 @@ namespace AerobicWithMe.Views
         public async Task GoToTimerPageButton_Pressed()//transfer to timer page
         {
             // Navigate to the singleton instance of TimerPage
-            var timerPage = TimerPage.Instance;
+            var timerPage = TimerPage.GetInstance;
             timerPage.setTitle(_mapTitle);
             await Shell.Current.Navigation.PushAsync(timerPage);
         }

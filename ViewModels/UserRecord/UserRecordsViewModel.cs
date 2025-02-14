@@ -310,9 +310,9 @@ namespace AerobicWithMe.ViewModels
 
 
             // Navigate to the singleton instance of MapPage
-            var mapPage = MapPage.Instance;
+            var mapPage = MapPage.GetInstance;
             mapPage.SetTitle("Create new map");
-            List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
+            List<Maui.GoogleMaps.Pin> pinList = MapPage.GetInstance.GetPinList();
             if (await mapPage.IsLocationEnabled())
             {
 
@@ -391,7 +391,7 @@ namespace AerobicWithMe.ViewModels
         public async Task ToTimerPage()//transfer to timer page
         {
             // Navigate to the singleton instance of MapPage
-            var timerPage = TimerPage.Instance;
+            var timerPage = TimerPage.GetInstance;
             await Shell.Current.Navigation.PushAsync(timerPage);
         }
 

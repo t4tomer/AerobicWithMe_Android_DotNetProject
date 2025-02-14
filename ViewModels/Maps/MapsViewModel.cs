@@ -125,7 +125,7 @@ namespace AerobicWithMe.ViewModels
         {
 
             // used to reset the timer when switching tracks 
-            var timer = TimerPage.Instance;
+            var timer = TimerPage.GetInstance;
             timer.ResetTimer();
 
             //set the singlton object to mappin type 
@@ -335,7 +335,7 @@ namespace AerobicWithMe.ViewModels
             //convert MapPin object with the same mapname to list with the same name but with type of Maui.GoogleMaps.Pin
             List<Maui.GoogleMaps.Pin> pinListOfSameMapName = getPinsListByName(mapName);
 
-            var mapPage = MapPage.Instance;
+            var mapPage = MapPage.GetInstance;
             mapPage.setPinsList(pinListOfSameMapName);
             mapPage.addPointsToTrack_Clicked();
             mapPage.SetTitle(mapName);
@@ -386,9 +386,9 @@ namespace AerobicWithMe.ViewModels
 
 
             // Navigate to the singleton instance of MapPage
-            var mapPage = MapPage.Instance;
+            var mapPage = MapPage.GetInstance;
             mapPage.SetTitle("Create new map");
-            List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
+            List<Maui.GoogleMaps.Pin> pinList = MapPage.GetInstance.GetPinList();
             if (await mapPage.IsLocationEnabled())
             {
                 mapPage.ShowStartExerciseButton(false);
@@ -438,7 +438,7 @@ namespace AerobicWithMe.ViewModels
 
 
             //observor desighn pattern 
-            List<Maui.GoogleMaps.Pin> pinsList = MapPage.Instance.GetPinList();
+            List<Maui.GoogleMaps.Pin> pinsList = MapPage.GetInstance.GetPinList();
 
             Track removeExistingTrack = new Track(trackNameToDelete, pinsList);
             var logger = new TrackLogger();
@@ -513,7 +513,7 @@ namespace AerobicWithMe.ViewModels
         public async Task ToTimerPage()//transfer to timer page
         {
             // Navigate to the singleton instance of MapPage
-            var timerPage = TimerPage.Instance;
+            var timerPage = TimerPage.GetInstance;
             await Shell.Current.Navigation.PushAsync(timerPage);
         }
 

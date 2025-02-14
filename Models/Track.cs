@@ -9,19 +9,21 @@ using Realms;
 
 namespace AerobicWithMe.Services
 {
-    // Observer Interface
+    // Observer Interface (Observer)
     public interface ITrackObserver
     {
         void OnTrackUpdated(Track track);
     }
 
-    // Subject Interface
+    // Subject Interface (Subject)
     public interface ITrackSubject
     {
         void Attach(ITrackObserver observer);
         void Detach(ITrackObserver observer);
         void Notify();
     }
+
+    // Concrete Subject (Concrete implementation of Subject)
 
     public class Track : ITrackSubject
     {
@@ -131,7 +133,7 @@ namespace AerobicWithMe.Services
         }
     }
 
-    // Concrete Observer
+    // Concrete Observer (Concrete implementation of Observer)
     public class TrackLogger : ITrackObserver
     {
         public void OnTrackUpdated(Track track)
