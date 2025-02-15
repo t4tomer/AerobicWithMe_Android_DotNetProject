@@ -59,6 +59,58 @@ namespace AerobicWithMe.Services
         }
 
 
+        private static (IQueryable<TrackMongo1> Query, string Name) GetQueryForSubscriptionTrackMongoType(Realm realm, SubscriptionType subType)
+        {
+
+
+
+            IQueryable<TrackMongo1> query = null;
+            string queryName = null;
+
+            if (subType == SubscriptionType.Mine)
+            {
+                query = realm.All<TrackMongo1>().Where(i => i.OwnerId == CurrentUser.Id);
+                queryName = "mine";
+            }
+            else if (subType == SubscriptionType.All)
+            {
+                query = realm.All<TrackMongo1>();
+                queryName = "all";
+            }
+            else
+            {
+                throw new ArgumentException("Unknown subscription type");
+            }
+
+            return (query, queryName);
+        }
+        //private static (IQueryable<Track> Query, string Name) GetQueryForSubscriptionTrackType(Realm realm, SubscriptionType subType)
+        //{
+
+        //    Console.WriteLine($"(GetQueryForSubscriptionDogType)inputObject is MapPin ");
+
+
+        //    IQueryable<Track> query = null;
+        //    string queryName = null;
+
+        //    if (subType == SubscriptionType.Mine)
+        //    {
+        //        query = realm.All<Track>().Where(i => i.OwnerId == CurrentUser.Id);
+        //        queryName = "mine";
+        //    }
+        //    else if (subType == SubscriptionType.All)
+        //    {
+        //        query = realm.All<Track>();
+        //        queryName = "all";
+        //    }
+        //    else
+        //    {
+        //        throw new ArgumentException("Unknown subscription type");
+        //    }
+
+        //    return (query, queryName);
+        //}
+
         private static (IQueryable<MapPin> Query, string Name) GetQueryForSubscriptionMapPinType(Realm realm, SubscriptionType subType)
         {
 

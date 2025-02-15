@@ -35,7 +35,11 @@ namespace AerobicWithMe.Models
             _currentType = new UserRecord();
             Console.WriteLine("Object type set to UserRecord.");
         }
-
+        public void SetTrackMongoType()
+        {
+            _currentType = new TrackMongo1();
+            Console.WriteLine("Object type set to TrackMongo.");
+        }
 
         // Method to get the current type
         public Type GetCurrentType()
