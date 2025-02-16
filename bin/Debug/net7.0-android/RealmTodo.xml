@@ -4,68 +4,6 @@
         <name>RealmTodo</name>
     </assembly>
     <members>
-        <member name="F:AerobicWithMe.Models.Dog.RealmSchema">
-            <summary>
-            Defines the schema for the <see cref="T:AerobicWithMe.Models.Dog"/> class.
-            </summary>
-        </member>
-        <member name="P:AerobicWithMe.Models.Dog.IsManaged">
-            <inheritdoc />
-        </member>
-        <member name="P:AerobicWithMe.Models.Dog.IsValid">
-            <inheritdoc />
-        </member>
-        <member name="P:AerobicWithMe.Models.Dog.IsFrozen">
-            <inheritdoc />
-        </member>
-        <member name="P:AerobicWithMe.Models.Dog.Realm">
-            <inheritdoc />
-        </member>
-        <member name="P:AerobicWithMe.Models.Dog.ObjectSchema">
-            <inheritdoc />
-        </member>
-        <member name="P:AerobicWithMe.Models.Dog.DynamicApi">
-            <inheritdoc />
-        </member>
-        <member name="P:AerobicWithMe.Models.Dog.BacklinksCount">
-            <inheritdoc />
-        </member>
-        <member name="E:AerobicWithMe.Models.Dog.PropertyChanged">
-            <inheritdoc />
-        </member>
-        <member name="M:AerobicWithMe.Models.Dog.op_Explicit(Realms.RealmValue)~AerobicWithMe.Models.Dog">
-            <summary>
-            Converts a <see cref="T:Realms.RealmValue"/> to <see cref="T:AerobicWithMe.Models.Dog"/>. Equivalent to <see cref="M:Realms.RealmValue.AsNullableRealmObject``1"/>.
-            </summary>
-            <param name="val">The <see cref="T:Realms.RealmValue"/> to convert.</param>
-            <returns>The <see cref="T:AerobicWithMe.Models.Dog"/> stored in the <see cref="T:Realms.RealmValue"/>.</returns>
-        </member>
-        <member name="M:AerobicWithMe.Models.Dog.op_Implicit(AerobicWithMe.Models.Dog)~Realms.RealmValue">
-            <summary>
-            Implicitly constructs a <see cref="T:Realms.RealmValue"/> from <see cref="T:AerobicWithMe.Models.Dog"/>.
-            </summary>
-            <param name="val">The value to store in the <see cref="T:Realms.RealmValue"/>.</param>
-            <returns>A <see cref="T:Realms.RealmValue"/> containing the supplied <paramref name="val"/>.</returns>
-        </member>
-        <member name="M:AerobicWithMe.Models.Dog.op_Implicit(AerobicWithMe.Models.Dog)~Realms.QueryArgument">
-            <summary>
-            Implicitly constructs a <see cref="T:Realms.QueryArgument"/> from <see cref="T:AerobicWithMe.Models.Dog"/>.
-            </summary>
-            <param name="val">The value to store in the <see cref="T:Realms.QueryArgument"/>.</param>
-            <returns>A <see cref="T:Realms.QueryArgument"/> containing the supplied <paramref name="val"/>.</returns>
-        </member>
-        <member name="M:AerobicWithMe.Models.Dog.GetTypeInfo">
-            <inheritdoc />
-        </member>
-        <member name="M:AerobicWithMe.Models.Dog.Equals(System.Object)">
-            <inheritdoc />
-        </member>
-        <member name="M:AerobicWithMe.Models.Dog.GetHashCode">
-            <inheritdoc />
-        </member>
-        <member name="M:AerobicWithMe.Models.Dog.ToString">
-            <inheritdoc />
-        </member>
         <member name="F:AerobicWithMe.Models.MapPin.RealmSchema">
             <summary>
             Defines the schema for the <see cref="T:AerobicWithMe.Models.MapPin"/> class.

@@ -42,30 +42,6 @@ namespace AerobicWithMe.Models
 
 
 
-        [PrimaryKey]
-        [MapTo("_id")]
-        public ObjectId Id { get; set; } = ObjectId.GenerateNewId();
-
-        [MapTo("owner_id")]
-        [Required]
-        public string OwnerId { get; set; }
-
-
-        [MapTo("TrackName")]//The variable that appears on the MONGO DB website
-        [Required]
-        public string TrackName { get; set; }
-
-        [MapTo("DateOfCreationTheTrack")]//The variable that appears on the MONGO DB website
-        [Required]
-        public string DateOfCreation { get; set; }
-
-        [MapTo("NumberOFPinsInTheTrack")]//The variable that appears on the MONGO DB website
-        public int NumberOfPins { get; set; }
-
-
-        [MapTo("DistanceOfTrackKm")]//The variable that appears on the MONGO DB website
-        public double DistanceOfTrack { get; set; }
-
 
 
 
@@ -122,9 +98,9 @@ namespace AerobicWithMe.Models
 
                 Console.WriteLine($"Uploading Pin -->'{pin.Label}': {pin.Address}");
                 await SavePin(pin, pinNumber);
+
             }
 
-            await SaveTrack(firstPinOfListAddedLast());
             Notify(); // Notify observers after upload
         }
 
@@ -158,58 +134,7 @@ namespace AerobicWithMe.Models
             await realm.WriteAsync(() => realm.Remove(pin));
         }
 
-        public async Task SaveDog()
-        {
-            Console.WriteLine($"--> SaveDog method (EditDogViewModel)");
-            //set the singlton object to mapin type 
-            //var singleton = ObjectSingleton.Instance;
-            //singleton.SetDogType();
-
-            // Get the Realm instance
-            var realm = RealmService.GetMainThreadRealm();
-
-            //this check fixed the problem of no flexibale subscrption !!!!
-
-            // Check if the subscription for Dog type exists
-            var dogSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "DogSubscription");
-
-            if (!dogSubscriptionExists)
-            {
-                Console.WriteLine("No existing subscription for Dog. Adding one now...");
-
-                // Add the subscription synchronously
-                realm.Subscriptions.Update(() =>
-                {
-                    var dogQuery = realm.All<Dog>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
-                    realm.Subscriptions.Add(dogQuery, new SubscriptionOptions { Name = "DogSubscription" });
-                });
-
-                Console.WriteLine("Dog subscription added. Waiting for synchronization...");
-
-                // Wait for synchronization
-                await realm.Subscriptions.WaitForSynchronizationAsync();
-                Console.WriteLine("Subscriptions synchronized successfully.");
-            }
-            else
-            {
-                Console.WriteLine("Dog subscription already exists.");
-            }
-
-            // Proceed with adding the Dog object
-            await realm.WriteAsync(() =>
-            {
-                realm.Add(new Dog()
-                {
-                    OwnerId = RealmService.CurrentUser.Id,
-                    Name = "summary",
-                    Age = 5
-                });
-            });
-
-            Console.WriteLine($"To view your data in Atlas, use this link: {RealmService.DataExplorerLink}");
-            await Shell.Current.GoToAsync("..");
-        }
-
+      
 
 
 
@@ -247,7 +172,6 @@ namespace AerobicWithMe.Models
 
 
             Console.WriteLine($"----->pinNumber2222 -->'{pinNumber}");
-            ObjectId newPinId;
 
 
             var pinAddingToMongo = new MapPin()
@@ -259,7 +183,8 @@ namespace AerobicWithMe.Models
                 Latitude = newPin.Position.Latitude.ToString(),
                 Longitude = newPin.Position.Longitude.ToString()
             };
-
+            if (pinNumber == 1)//get the first pin id that is added to mongodb 
+                await SaveTrack(pinAddingToMongo.Id);
 
             await realm.WriteAsync(() =>
             {
@@ -273,34 +198,7 @@ namespace AerobicWithMe.Models
         }
 
 
-        private static ObjectId firstPinOfListAddedLast()
-        {
-            var singleton = TypeFactory.Instance;
-            singleton.SetTrackMongoType();
 
-            var realm = RealmService.GetMainThreadRealm();
-
-            var latestMapPin = realm.All<MapPin>()
-                .Where(p => p.OwnerId == RealmService.CurrentUser.Id)
-                .OrderByDescending(p => p.Id) // Sort by ObjectId (newest first)
-                .First(); // Get the most recent pin
-
-            if (latestMapPin != null)
-            {
-                Console.WriteLine($"Most recent MapPin Id!!!: {latestMapPin.Id}");
-                return latestMapPin.Id;
-
-            }
-            else
-            {
-                Console.WriteLine("No MapPins found for this user.");
-            }
-
-
-            return latestMapPin.Id;
-
-
-        }
 
         private static string GetDateTime()
         {
@@ -316,25 +214,14 @@ namespace AerobicWithMe.Models
         }
 
 
-        private static string GetCurrentDate()
-        {
-            // Get the current date and time
-            DateTime now = DateTime.Now;
-
-            string formattedDate = now.ToString("dd/MM/yyyy ");
-
-
-
-            return formattedDate;
-        }
+    
 
         public async Task SaveTrack(ObjectId firstPinIdNumber)
         {
             MapUtility mapUtility = new MapUtility(_pinsList);
-            //AddRecordToDb getDate = new AddRecordToDb("GetDate");
 
-            //var singleton = TypeFactory.Instance;
-            //singleton.SetTrackMongoType();
+            var singleton = TypeFactory.Instance;
+            singleton.SetTrackMongoType();
 
 
             var realm = RealmService.GetMainThreadRealm();
