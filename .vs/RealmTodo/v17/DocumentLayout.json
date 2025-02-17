@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "Models\\Track.cs",
               "ToolTip": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Models\\Track.cs",
               "RelativeToolTip": "Models\\Track.cs",
-              "ViewState": "AQIAAK4AAAAAAAAAAAAEwL0AAAANAAAA",
+              "ViewState": "AQIAAH0AAAAAAAAAAAAlwJsAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T19:05:09.817Z",
               "EditorCaption": ""
@@ -67,8 +67,7 @@
               "RelativeToolTip": "ViewModels\\Maps\\MapsViewModel.cs",
               "ViewState": "AQIAAJIBAAAAAAAAAAAtwJgBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:49:57.133Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T18:49:57.133Z"
             },
             {
               "$type": "Document",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "Services\\RealmService.cs",
               "ViewState": "AQIAAH8AAAAAAAAAAAAQwFwAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T14:11:36.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T14:11:36.547Z"
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "Models\\TypeFactory.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAgwCoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T14:49:08.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T14:49:08.252Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "Services\\IMapUtility.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T11:31:00.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T11:31:00.955Z"
             },
             {
               "$type": "Document",
@@ -119,8 +115,7 @@
               "RelativeToolTip": "Models\\MapUtility.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAAwAsAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T10:03:36.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T10:03:36.568Z"
             }
           ]
         },
@@ -142,8 +137,7 @@
               "RelativeToolTip": "Models\\TrackMongo1.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAIwBcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T14:41:06.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T14:41:06.594Z"
             },
             {
               "$type": "Document",

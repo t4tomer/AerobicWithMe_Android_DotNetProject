@@ -104,27 +104,30 @@ namespace AerobicWithMe.Models
             Notify(); // Notify observers after upload
         }
 
-        public async Task RemoveTrack(MapPin pinOfChoseMap)
+        public async Task RemoveTrack(MapPin pinOfChosenMap)
         {
 
-            string trackNameToDelete = pinOfChoseMap.Mapname;
+            string trackNameToDelete = pinOfChosenMap.Mapname;
 
             var singleton = TypeFactory.Instance;
             singleton.SetMapPinType();
             var realm = RealmService.GetMainThreadRealm();
 
+            await DeleteTrack(pinOfChosenMap);
+
             var mapToDelete = realm.All<MapPin>()
                 .Where(track => track.Mapname == trackNameToDelete)
                 .ToList();
 
+            // Delete the mappins object from mongo 
             foreach (var pin in mapToDelete)
             {
                 await DeleteSinglePin(pin);
             }
-
             Notify(); // Notify observers after deletion
         }
 
+        //Delete single MapPin object from Mongodb
         private async Task DeleteSinglePin(MapPin pin)
         {
             var singleton = TypeFactory.Instance;
@@ -134,7 +137,26 @@ namespace AerobicWithMe.Models
             await realm.WriteAsync(() => realm.Remove(pin));
         }
 
-      
+        //Delete TrackMongo1 objet from Mongodb 
+        private async Task DeleteTrack(MapPin pin)
+        {
+            var singleton = TypeFactory.Instance;
+            singleton.SetTrackMongoType();
+            var realm = RealmService.GetMainThreadRealm();
+
+            ObjectId pinId = pin.Id; // Replace with your actual MapPin Id
+            
+            var track = realm.All<TrackMongo1>()//Get Track object
+            .FirstOrDefault(t => t.IdOfFirstPin == pinId);
+
+            if (track == null)
+                return;
+
+
+            await realm.WriteAsync(() => realm.Remove(track));
+
+        }
+
 
 
 
