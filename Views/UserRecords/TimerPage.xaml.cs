@@ -140,19 +140,7 @@ namespace AerobicWithMe.Views
         }
 
 
-        private static string GetCurrentDateTime()
-        {
-            // Get the current date and time
-            DateTime now = DateTime.Now;
-
-            // Format it as a string
-            //string formattedDateTime = now.ToString("yyyy-MM-dd HH:mm:ss");
-            string formattedDateTime = now.ToString("dd-MM-yyyy HH:mm:ss");
-
-
-            return formattedDateTime;
-        }
-
+  
 
 
         protected virtual void OnPropertyChanged(string propertyName)

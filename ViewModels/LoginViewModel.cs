@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using AerobicWithMe.Services;
 using System.Threading.Tasks;
+using AerobicWithMe.Interfaces;
 
 namespace AerobicWithMe.ViewModels
 {

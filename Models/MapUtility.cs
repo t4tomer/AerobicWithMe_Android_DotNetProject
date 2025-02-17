@@ -4,6 +4,7 @@ using Microsoft.Maui.Devices.Sensors;
 using Microsoft.Maui.Maps;
 using Position = Maui.GoogleMaps.Position;
 using AerobicWithMe.Services;
+using AerobicWithMe.Interfaces;
 
 //object that is used for saving methods that are used for map page.
 
@@ -56,6 +57,43 @@ namespace AerobicWithMe.Models
             }
         }
 
+
+
+        public  string getDateTime()
+        {
+
+
+
+            return getCurrentDate() + getCurrentTime();
+        }
+
+
+        public string getCurrentTime()
+        {
+            // Get the current date and time
+            DateTime now = DateTime.Now;
+
+            string formattedTime = now.ToString("HH:mm:ss ");
+
+
+
+            return formattedTime;
+        }
+
+
+        public  string getCurrentDate()
+        {
+            // Get the current date and time
+            DateTime now = DateTime.Now;
+
+            string formattedDate = now.ToString("dd/MM/yyyy ");
+
+
+
+            return formattedDate;
+        }
+
+
         private Maui.GoogleMaps.Pin getPoint(double x, double y, string inputLabel, string inputAddress)
         {
             var position = new Location(x, y);
@@ -94,15 +132,12 @@ namespace AerobicWithMe.Models
             switch (pinsList)
             {
                 case null:
-                    Console.WriteLine("----> no points");
                     break;
 
                 case { Count: 0 }:
-                    Console.WriteLine("----> no points");
                     break;
 
                 case { Count: 1 }:
-                    Console.WriteLine("----> first point, no line");
                     break;
 
                 case { Count: 2 }:
@@ -121,15 +156,12 @@ namespace AerobicWithMe.Models
                         {
                             nextPin = enumerator.Current;
 
-                            Console.WriteLine($"Current Pin Address: '{currentPin.Label}': {currentPin.Address}, -> Next Pin Address: '{nextPin.Label}': {nextPin.Address}");
 
                             drawLineBetween2Pins(currentPin, nextPin, strokeColorPolyline);
 
                             currentPin = nextPin;
                         }
 
-                        // For the last pin, nextPin will be null.
-                        Console.WriteLine($"Current Pin Address: '{currentPin.Label}': {currentPin.Address} -> Next Pin Address: None");
                     }
                     break;
             }
@@ -140,8 +172,6 @@ namespace AerobicWithMe.Models
         {
 
 
-            Console.WriteLine($" \t\t-->pin1:" + pin1.Label);
-            Console.WriteLine($" \t\t-->pin2:" + pin2.Label);
 
 
             // Create a list to store all polylines that match the removal criteria
@@ -164,7 +194,6 @@ namespace AerobicWithMe.Models
             foreach (var polylineToRemove in polylinesToRemove)
             {
                 myMap.Polylines.Remove(polylineToRemove);
-                Console.WriteLine($" \t\t-->Polyline removed.");
             }
             polylinesToRemove = null; // Dereference the list
 
@@ -176,7 +205,6 @@ namespace AerobicWithMe.Models
         // used to delet the last point added on the map and the polylin that connected to this point
         public void deleteLastPoint(List<Maui.GoogleMaps.Pin> pinsList)
         {
-            //TODO fix the problem of removing last point with the polyline
             Console.WriteLine($" \t\t-->Number of pins(MapHelper):"+ pinsList.Count);
             switch (pinsList.Count)
             {
@@ -191,23 +219,19 @@ namespace AerobicWithMe.Models
                     {
                         var beforeLastPin = pinsList[0];
                         var lastPin = pinsList[1];
-                        Console.WriteLine($" \t\t-->lastPin: {lastPin.Label}");
-                        Console.WriteLine($" \t\t-->beforeLastPin: {beforeLastPin.Label}");
-                        Console.WriteLine($" \t\t-->pinsList.Count: {pinsList.Count}");
+            
 
                         // Remove the polyline between the last pin and the pin before last pin
                         removePolylineBetweenPins(beforeLastPin, lastPin);
 
                         // Remove the last pin from the map's Pins collection
                         myMap.Pins.Remove(lastPin);
-                        Console.WriteLine("There are 2 pins!!!");
                         break;
                     }
                 default:
                     {
                         if (pinsList.Count > 2)
                         {
-                            Console.WriteLine($" \t\t-->there are more than 2 pins: {pinsList.Count}");
 
                             // Get the last pin & the pin before last pin in the list
                             var lastPin = pinsList[pinsList.Count - 1];
@@ -222,7 +246,6 @@ namespace AerobicWithMe.Models
                         }
                         else
                         {
-                            Console.WriteLine("No pins to remove.");
                         }
                         break;
                     }
@@ -255,7 +278,6 @@ namespace AerobicWithMe.Models
                     double dist = getDistance2Points(pinsList[0], pinsList[1]);
                     str = $"\np{pinsList[0].Label}➔p{pinsList[1].Label}, distance is: {dist} km";
                     stringList.Add(str);
-                    Console.WriteLine(str+"TEST!!!");
                     break;
 
                 default:
@@ -284,168 +306,9 @@ namespace AerobicWithMe.Models
 
 
 
-        private Color[] GetAllColors()
-        {
-            return new Color[]
-            {
-                Colors.Aqua,
-                Colors.Aquamarine,
-                Colors.Azure,
-                Colors.Beige,
-                Colors.Bisque,
-                Colors.Black,
-                Colors.BlanchedAlmond,
-                Colors.Blue,
-                Colors.BlueViolet,
-                Colors.Brown,
-                Colors.BurlyWood,
-                Colors.CadetBlue,
-                Colors.Chartreuse,
-                Colors.Chocolate,
-                Colors.Coral,
-                Colors.CornflowerBlue,
-                Colors.Cornsilk,
-                Colors.Crimson,
-                Colors.Cyan,
-                Colors.DarkBlue,
-                Colors.DarkCyan,
-                Colors.DarkGoldenrod,
-                Colors.DarkGray,
-                Colors.DarkGreen,
-                Colors.DarkGrey,
-                Colors.DarkKhaki,
-                Colors.DarkMagenta,
-                Colors.DarkOliveGreen,
-                Colors.DarkOrange,
-                Colors.DarkOrchid,
-                Colors.DarkRed,
-                Colors.DarkSalmon,
-                Colors.DarkSeaGreen,
-                Colors.DarkSlateBlue,
-                Colors.DarkSlateGray,
-                Colors.DarkSlateGrey,
-                Colors.DarkTurquoise,
-                Colors.DarkViolet,
-                Colors.DeepPink,
-                Colors.DeepSkyBlue,
-                Colors.DimGray,
-                Colors.DimGrey,
-                Colors.DodgerBlue,
-                Colors.Firebrick,
-                Colors.ForestGreen,
-                Colors.Fuchsia,
-                Colors.Gainsboro,
-                Colors.Gold,
-                Colors.Goldenrod,
-                Colors.Gray,
-                Colors.Green,
-                Colors.GreenYellow,
-                Colors.Grey,
-                Colors.Honeydew,
-                Colors.HotPink,
-                Colors.IndianRed,
-                Colors.Indigo,
-                Colors.Ivory,
-                Colors.Khaki,
-                Colors.Lavender,
-                Colors.LavenderBlush,
-                Colors.LawnGreen,
-                Colors.LemonChiffon,
-                Colors.LightBlue,
-                Colors.LightCoral,
-                Colors.LightCyan,
-                Colors.LightGoldenrodYellow,
-                Colors.LightGray,
-                Colors.LightGreen,
-                Colors.LightGrey,
-                Colors.LightPink,
-                Colors.LightSalmon,
-                Colors.LightSeaGreen,
-                Colors.LightSkyBlue,
-                Colors.LightSlateGray,
-                Colors.LightSlateGrey,
-                Colors.LightSteelBlue,
-                Colors.LightYellow,
-                Colors.Lime,
-                Colors.LimeGreen,
-                Colors.Linen,
-                Colors.Magenta,
-                Colors.Maroon,
-                Colors.MediumAquamarine,
-                Colors.MediumBlue,
-                Colors.MediumOrchid,
-                Colors.MediumPurple,
-                Colors.MediumSeaGreen,
-                Colors.MediumSlateBlue,
-                Colors.MediumSpringGreen,
-                Colors.MediumTurquoise,
-                Colors.MediumVioletRed,
-                Colors.MidnightBlue,
-                Colors.MintCream,
-                Colors.MistyRose,
-                Colors.Moccasin,
-                Colors.Navy,
-                Colors.OldLace,
-                Colors.Olive,
-                Colors.OliveDrab,
-                Colors.Orange,
-                Colors.OrangeRed,
-                Colors.Orchid,
-                Colors.PaleGoldenrod,
-                Colors.PaleGreen,
-                Colors.PaleTurquoise,
-                Colors.PaleVioletRed,
-                Colors.PapayaWhip,
-                Colors.PeachPuff,
-                Colors.Peru,
-                Colors.Pink,
-                Colors.Plum,
-                Colors.PowderBlue,
-                Colors.Purple,
-                Colors.Red,
-                Colors.RosyBrown,
-                Colors.RoyalBlue,
-                Colors.SaddleBrown,
-                Colors.Salmon,
-                Colors.SandyBrown,
-                Colors.SeaGreen,
-                Colors.SeaShell,
-                Colors.Sienna,
-                Colors.Silver,
-                Colors.SkyBlue,
-                Colors.SlateBlue,
-                Colors.SlateGray,
-                Colors.SlateGrey,
-                Colors.SpringGreen,
-                Colors.SteelBlue,
-                Colors.Tan,
-                Colors.Teal,
-                Colors.Thistle,
-                Colors.Tomato,
-                Colors.Transparent,
-                Colors.Turquoise,
-                Colors.Violet,
-            };
-        }
+    
 
-        private Color[] GetRandomizedColors()
-        {
-            Color[] colors = GetAllColors(); // Retrieve the array of all colors
-            Random random = new Random();
-
-            // Fisher-Yates shuffle algorithm to randomize the array
-            for (int i = colors.Length - 1; i > 0; i--)
-            {
-                int randomIndex = random.Next(i + 1);
-                // Swap the colors
-                Color temp = colors[i];
-                colors[i] = colors[randomIndex];
-                colors[randomIndex] = temp;
-            }
-
-            return colors;
-        }
-
+       
 
 
         private void drawLineBetween2Pins(Pin pin1, Pin pin2,int strokeColorPolyline)
@@ -465,25 +328,14 @@ namespace AerobicWithMe.Models
                 return;
             }
 
-            //TODO return to this 
-            Color[] colors = GetAllColors(); // Retrieve the array of all colors
-            if (strokeColorPolyline == colors.Length)
-                strokeColorPolyline = 0;
 
-            //strokeColorPolyline = strokeColorPolyline + 1;
-            Console.WriteLine("strokeColorPolyline-->:"+ strokeColorPolyline);
-            Console.WriteLine("colors:" + colors[strokeColorPolyline]);
             // Create a new polyline
             var polyline = new Polyline
             {
-                //TODO need to fix the the line
-                // so that between every 2 points there will polyline withdiffrent color
-
-                StrokeColor = colors[8], // Set the color of the line
+                StrokeColor = Colors.BlueViolet, // Set the color of the line
                 StrokeWidth = 5,            // Set the width of the line
                 Tag =pinsList.Count+1
             };
-            Console.WriteLine("strokeColorPolyline-->:" + strokeColorPolyline);
 
 
             // Add the positions from the pins to the polyline

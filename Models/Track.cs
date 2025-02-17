@@ -222,19 +222,6 @@ namespace AerobicWithMe.Models
 
 
 
-        private static string GetDateTime()
-        {
-            // Get the current date and time
-            DateTime nowTime = DateTime.Now;
-            string formattedTime = nowTime.ToString("HH:mm:ss ");
-
-            DateTime nowDate = DateTime.Now;
-            string formattedDate = nowDate.ToString("dd/MM/yyyy ");
-
-
-            return formattedDate + formattedTime;
-        }
-
 
     
 
@@ -285,7 +272,7 @@ namespace AerobicWithMe.Models
                     OwnerId = RealmService.CurrentUser.Id,
                     IdOfFirstPin = firstPinIdNumber,
                     TrackName = _inputTrackName,
-                    DateOfCreation = GetDateTime(),
+                    DateOfCreation = mapUtility.getDateTime(),
                     NumberOfPins = _pinsList.Count,
                     DistanceOfTrack = mapUtility.calculateTotalDistance(),
                 });

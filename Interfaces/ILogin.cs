@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace AerobicWithMe.Services
+namespace AerobicWithMe.Interfaces
 {
     public interface ILogin
     {

@@ -60,7 +60,7 @@ namespace AerobicWithMe.Views
 
         public string CurrentTime
         {
-            get => GetCurrentTime();
+            get => new MapUtility().getCurrentTime(); // Remove the extra ()
             set
             {
                 if (_formattedTime != value)
@@ -73,7 +73,7 @@ namespace AerobicWithMe.Views
 
         public string CurrentDate
         {
-            get => GetCurrentDate();
+            get => new MapUtility().getCurrentDate();
             set
             {
                 if (_formattedDate != value)
@@ -85,30 +85,27 @@ namespace AerobicWithMe.Views
         }
 
 
-        private static string GetCurrentTime()
-        {
-            // Get the current date and time
-            DateTime now = DateTime.Now;
+        //private static string GetCurrentTime()
+        //{
 
-            string formattedTime = now.ToString("HH:mm:ss ");
+        //    MapUtility time = new MapUtility();
+        //    string test = new MapUtility().getCurrentTime();
 
-
-
-            return formattedTime;
-        }
+        //    return time.getCurrentTime();
+        //}
 
 
-        private static string GetCurrentDate()
-        {
-            // Get the current date and time
-            DateTime now = DateTime.Now;
+        //private static string GetCurrentDate()
+        //{
+        //    // Get the current date and time
+        //    DateTime now = DateTime.Now;
 
-            string formattedDate = now.ToString("dd/MM/yyyy ");
+        //    string formattedDate = now.ToString("dd/MM/yyyy ");
 
 
 
-            return formattedDate;
-        }
+        //    return formattedDate;
+        //}
 
 
         public AddRecordToDb()
