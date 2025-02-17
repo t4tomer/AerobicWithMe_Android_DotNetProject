@@ -181,6 +181,24 @@ namespace AerobicWithMe.ViewModels
         }
 
 
+        private static bool CheckMapNameAlreadyExists(string inputTrackName)
+        {
+
+            var singleton = TypeFactory.Instance;
+            singleton.SetTrackMongoType();
+
+            var realm = RealmService.GetMainThreadRealm();
+
+            // Check if any MongoTrack1 object already has the same map name
+            bool exists = realm.All<TrackMongo1>().Any(t => t.TrackName == inputTrackName);
+
+            return exists; // Return false if it exists, true otherwise
+        }
+
+
+  
+
+
         //TODO nned to fix this method 
         [RelayCommand]
         public async Task UploadToCloudPins()
@@ -189,8 +207,12 @@ namespace AerobicWithMe.ViewModels
 
             if (string.IsNullOrEmpty(InputTrackName))
             {
-                Console.WriteLine($"---------> empty InputTrackName ");
                 await DialogService.ShowAlertAsync("Error", "Can Not Enter Empty Track Name.", "OK");
+                return;
+            }
+            if (CheckMapNameAlreadyExists(InputTrackName))
+            {
+                await DialogService.ShowAlertAsync("Error", "TrackName Allready Exists ,enter diffrent name", "OK");
                 return;
             }
 
@@ -200,10 +222,6 @@ namespace AerobicWithMe.ViewModels
 
             List<Maui.GoogleMaps.Pin> pinsList = MapPage.GetInstance.GetPinList();
 
-            //Track new_Track = new Track(InputTrackName, pinsList);//create new Track object
-            //await new_Track.AddTrack();
-
-            //observor desighn pattern 
 
             Track addNewTrack = new Track(InputTrackName, pinsList);
             var logger = new TrackLogger();
@@ -217,80 +235,6 @@ namespace AerobicWithMe.ViewModels
 
         }
 
-        /*
-                public async Task SavePin(Maui.GoogleMaps.Pin newPin)
-                {
-                    Console.WriteLine($"SavePin EditMapPin -->'{newPin.Label}': {newPin.Address}");
-
-                    var singleton = TypeFactory.Instance;
-                    singleton.SetMapPinType();
-
-
-                    var realm = RealmService.GetMainThreadRealm();
-
-
-
-                    var mapPinSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "DogSubscription");
-
-                    if (!mapPinSubscriptionExists)
-                    {
-                        Console.WriteLine("No existing subscription for MapPin. Adding one now...");
-
-                        // Add the subscription synchronously
-                        realm.Subscriptions.Update(() =>
-                        {
-                            var mapPinQuery = realm.All<MapPin>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
-                            realm.Subscriptions.Add(mapPinQuery, new SubscriptionOptions { Name = "DogSubscription" });
-                        });
-
-                        Console.WriteLine("MapPin subscription added. Waiting for synchronization...");
-
-                        // Wait for synchronization
-                        await realm.Subscriptions.WaitForSynchronizationAsync();
-                        Console.WriteLine("MapPin synchronized successfully.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("MapPin subscription already exists.");
-                    }
-
-
-
-
-
-
-                    await realm.WriteAsync(() =>
-                    {
-                        if (InitialMapPin != null) // editing an item
-                        {
-                            InitialMapPin.Mapname = InputTrackName;
-                            InitialMapPin.Labelpin = Label_pinNew;
-                            InitialMapPin.Address = AddressNew;
-                            InitialMapPin.Latitude = LatitudeNew;
-                            InitialMapPin.Longitude = LongtiudeNew;
-
-                        }
-                        else // creating a new item
-                        {
-                            realm.Add(new MapPin()
-                            {
-                                OwnerId = RealmService.CurrentUser.Id,
-                                Mapname = InputTrackName,
-                                Labelpin = newPin.Label,
-                                Address = newPin.Address,
-                                Latitude = newPin.Position.Latitude.ToString(),
-                                Longitude = newPin.Position.Longitude.ToString()
-                            });
-                        }
-                    });
-
-
-
-
-                    Console.WriteLine($"To view your data in Atlas, use this link: {RealmService.DataExplorerLink}");
-                    await Shell.Current.GoToAsync("..");
-                }
-                */
 
 
 

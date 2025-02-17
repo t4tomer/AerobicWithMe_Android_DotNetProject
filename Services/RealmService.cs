@@ -2,10 +2,11 @@ using System.Text.Json;
 using Realms;
 using Realms.Sync;
 using AerobicWithMe.Models;
+using AerobicWithMe.Interfaces;
 
 namespace AerobicWithMe.Services
 {
-    public static class RealmService
+    public static class RealmService 
     {
         private static bool serviceInitialised;
 
@@ -84,32 +85,7 @@ namespace AerobicWithMe.Services
 
             return (query, queryName);
         }
-        //private static (IQueryable<Track> Query, string Name) GetQueryForSubscriptionTrackType(Realm realm, SubscriptionType subType)
-        //{
 
-        //    Console.WriteLine($"(GetQueryForSubscriptionDogType)inputObject is MapPin ");
-
-
-        //    IQueryable<Track> query = null;
-        //    string queryName = null;
-
-        //    if (subType == SubscriptionType.Mine)
-        //    {
-        //        query = realm.All<Track>().Where(i => i.OwnerId == CurrentUser.Id);
-        //        queryName = "mine";
-        //    }
-        //    else if (subType == SubscriptionType.All)
-        //    {
-        //        query = realm.All<Track>();
-        //        queryName = "all";
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentException("Unknown subscription type");
-        //    }
-
-        //    return (query, queryName);
-        //}
 
         private static (IQueryable<MapPin> Query, string Name) GetQueryForSubscriptionMapPinType(Realm realm, SubscriptionType subType)
         {
@@ -209,23 +185,7 @@ namespace AerobicWithMe.Services
 
 
         }
-        /* //the orignal method for GetRealm
-        public static Realm GetRealm()
-        {
-
-            var config = new FlexibleSyncConfiguration(app.CurrentUser)
-            {
-                PopulateInitialSubscriptions = (realm) =>
-                {
-                    var (query, queryName) = GetQueryForSubscriptionType(realm, SubscriptionType.Mine);
-                    realm.Subscriptions.Add(query, new SubscriptionOptions { Name = queryName });
-                }
-            };
-
-            return Realm.GetInstance(config);
-        }
-
-        */
+        
 
         public static async Task RegisterAsync(string email, string password)
         {
