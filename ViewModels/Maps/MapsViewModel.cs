@@ -27,35 +27,20 @@ namespace AerobicWithMe.ViewModels
         [ObservableProperty]
         private IQueryable<MapPin> maps;
 
-        [ObservableProperty]
-        public string dataExplorerLink = RealmService.DataExplorerLink;
+
 
         private Realm realm;
         private string currentUserId;
         private bool isOnline = true;
 
 
-        //-->Start--->used for testing -upload user record object to mongodb 
-
-        [ObservableProperty]
-        private UserRecord initialUserRecord;
-
-        [ObservableProperty]
-        private string profileNameNew;
 
 
-        [ObservableProperty]
-        private string mapNameNew;
 
 
-        [ObservableProperty]
-        private string trackTimeNew;
 
-        [ObservableProperty]
-        private string uploadDateTimeNew;
 
-        [ObservableProperty]
-        private string comment;
+
 
         [ObservableProperty]
         private string pageHeader;
@@ -69,13 +54,15 @@ namespace AerobicWithMe.ViewModels
 
 
 
-        public ICommand NavigateCommand { get; private set; }
 
         public MapsViewModel()
         {
             //set singlton to mappin 
-            var singleton = TypeFactory.Instance;
-            singleton.SetMapPinType();
+            //var singleton = ObjectMongoFactory.Instance;
+            //singleton.SetMapPinType();
+
+            ObjectMongoFactory UploadObjectToMong = new ObjectMongoFactory();
+            UploadObjectToMong.CreateMapPin();
 
             realm = RealmService.GetMainThreadRealm();
             currentUserId = RealmService.CurrentUser.Id;
@@ -83,10 +70,7 @@ namespace AerobicWithMe.ViewModels
 
         public async void deleteExistingMapPinFromCloude(Maui.GoogleMaps.Pin newPin, string mapNameToDelete)
         {
-            Console.WriteLine($"----> deleteExistingMapPinFromCloude OwnerId:{RealmService.CurrentUser.Id} ");
-            Console.WriteLine($"----> deleteExistingMapPinFromCloude mapName:{mapNameToDelete} ");
-            Console.WriteLine($"----> deleteExistingMapPinFromCloude label:{newPin.Label} ");
-            Console.WriteLine($"----> deleteExistingMapPinFromCloude Address:{newPin.Address} ");
+
 
 
             var mapPinToDelete = new MapPin
@@ -106,18 +90,7 @@ namespace AerobicWithMe.ViewModels
 
         }
 
-        private static string GetCurrentDateTime()
-        {
-            // Get the current date and time
-            DateTime now = DateTime.Now;
 
-            // Format it as a string
-            //string formattedDateTime = now.ToString("yyyy-MM-dd HH:mm:ss");
-            string formattedDateTime = now.ToString("dd-MM-yyyy HH:mm:ss");
-
-
-            return formattedDateTime;
-        }
 
 
         [RelayCommand]
@@ -129,8 +102,12 @@ namespace AerobicWithMe.ViewModels
             timer.ResetTimer();
 
             //set the singlton object to mappin type 
-            var singleton = TypeFactory.Instance;
-            singleton.SetMapPinType();
+
+            //var singleton = ObjectMongoFactory.Instance;
+            //singleton.SetMapPinType();
+            ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();
+            uploadObjectToMongo.CreateMapPin();
+
             realm = RealmService.GetMainThreadRealm();
 
             // Check if the subscription for MapPin  type exists
@@ -181,88 +158,12 @@ namespace AerobicWithMe.ViewModels
         }
 
 
-        [RelayCommand]
-        public async Task SaveUserRecord()
-        {// used for testing 
-            Console.WriteLine($"SaveUserRecord EditUserRecord -->");
-
-            var singleton = TypeFactory.Instance;
-            singleton.SetUserRecordType();
-
-
-            var realm = RealmService.GetMainThreadRealm();
-
-            var userRecordsSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "DogSubscription");
-
-            if (!userRecordsSubscriptionExists)
-            {
-                Console.WriteLine("No existing subscription for Dog. Adding one now...");
-
-                // Add the subscription synchronously
-                realm.Subscriptions.Update(() =>
-                {
-                    var userRecordQuery = realm.All<UserRecord>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
-                    realm.Subscriptions.Add(userRecordQuery, new SubscriptionOptions { Name = "DogSubscription" });
-                });
-
-                Console.WriteLine("MapPin subscription added. Waiting for synchronization...");
-
-                // Wait for synchronization
-                await realm.Subscriptions.WaitForSynchronizationAsync();
-                Console.WriteLine("MapPin synchronized successfully.");
-            }
-            else
-            {
-                Console.WriteLine("MapPin subscription already exists.");
-            }
-
-
-
-
-
-            await realm.WriteAsync(() =>
-            {
-                if (InitialUserRecord != null) // editing an item
-                {
-                    InitialUserRecord.ProfileName = profileNameNew;
-                    InitialUserRecord.MapName = mapNameNew;
-                    InitialUserRecord.TrackTime = trackTimeNew;
-                    InitialUserRecord.UploadDateTime = uploadDateTimeNew;
-
-                }
-                else // creating a new item
-                {
-                    realm.Add(new UserRecord()
-                    {
-                        OwnerId = RealmService.CurrentUser.Id,
-                        ProfileName = "test1",
-                        MapName = "mapTest",
-                        TrackTime = "tracktime",
-                        UploadDateTime = GetCurrentDateTime(),
-                        Comment = "CommentTest" + GetCurrentDateTime()
-
-                    });
-                }
-            });
-
-
-
-
-            await Shell.Current.GoToAsync("..");
-        }
+    
 
         [RelayCommand]
         public async Task GoToUserRecordsList()
         {
-            //go to user record  list 
-            //await Shell.Current.GoToAsync($"//user_records_list");
 
-            // Navigate to the singleton instance of MapPage
-            //UserRecordsPage test=new UserRecordsPage();
-
-            //await Shell.Current.Navigation.PushAsync(test);
-
-            //TODO fix the problem of app crashing when going to records page
 
 
 
@@ -317,12 +218,6 @@ namespace AerobicWithMe.ViewModels
         }
 
 
-
-        [RelayCommand]
-        public void TestCommand(MapPin pin)
-        {
-            Console.WriteLine("TestCommand triggered!");
-        }
 
 
         //method that is used to edit map
@@ -412,10 +307,7 @@ namespace AerobicWithMe.ViewModels
         [RelayCommand]
         public async Task DeleteMap(MapPin pinOfChosenMap)
         {
-
             string trackNameToDelete = pinOfChosenMap.Mapname;
-
-
 
 
             if (!await CheckMapOwnership(pinOfChosenMap))
@@ -423,18 +315,10 @@ namespace AerobicWithMe.ViewModels
                 return;
             }
 
-
             if (!await WarningDeletingMyTrack(pinOfChosenMap))
             {
                 return;
             }
-
-
-
-            //List<Maui.GoogleMaps.Pin> pinsList = MapPage.Instance.GetPinList();
-            //Track remove_Track = new Track(trackNameToDelete, pinsList);//create new Track object
-            //await remove_Track.RemoveTrack(pinOfChosenMap);
-
 
 
             //observor desighn pattern 
@@ -459,7 +343,6 @@ namespace AerobicWithMe.ViewModels
 
 
 
-
         }
 
         public async Task DeleteUsersOfTrack(string trackName)
@@ -467,8 +350,12 @@ namespace AerobicWithMe.ViewModels
             UserRecordsViewModel deleteUseres = new UserRecordsViewModel();
 
             //set singlton to UserRecord 
-            var singleton = TypeFactory.Instance;
-            singleton.SetUserRecordType();
+            //var singleton = ObjectMongoFactory.Instance;
+            //singleton.SetUserRecordType();
+
+            ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();
+            uploadObjectToMongo.CreateUserRecord();
+
             realm = RealmService.GetMainThreadRealm();
 
             // list of user records with the same MapName 
@@ -539,11 +426,7 @@ namespace AerobicWithMe.ViewModels
             ConnectionStatusIcon = isOnline ? "wifi_on.png" : "wifi_off.png";
         }
 
-        [RelayCommand]
-        public async Task UrlTap(string url)
-        {
-            await Launcher.OpenAsync(DataExplorerLink);
-        }
+
 
         private async Task<bool> WarningDeletingMyTrack(MapPin chosenPinOfMap)
         {

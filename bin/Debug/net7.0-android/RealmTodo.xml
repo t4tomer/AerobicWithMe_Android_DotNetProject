@@ -291,9 +291,6 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
         </member>
         <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ConnectionStatusIcon">
             <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.connectionStatusIcon"/>
@@ -303,27 +300,6 @@
         </member>
         <member name="P:AerobicWithMe.ViewModels.MapsViewModel.Maps">
             <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.maps"/>
-        </member>
-        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.DataExplorerLink">
-            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.dataExplorerLink"/>
-        </member>
-        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.InitialUserRecord">
-            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.initialUserRecord"/>
-        </member>
-        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ProfileNameNew">
-            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.profileNameNew"/>
-        </member>
-        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.MapNameNew">
-            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.mapNameNew"/>
-        </member>
-        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.TrackTimeNew">
-            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.trackTimeNew"/>
-        </member>
-        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.UploadDateTimeNew">
-            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.uploadDateTimeNew"/>
-        </member>
-        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.Comment">
-            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.comment"/>
         </member>
         <member name="P:AerobicWithMe.ViewModels.MapsViewModel.PageHeader">
             <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.pageHeader"/>
@@ -339,12 +315,6 @@
         <member name="P:AerobicWithMe.ViewModels.MapsViewModel.AppearingCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.OnAppearing"/>.</summary>
         </member>
-        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.saveUserRecordCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.SaveUserRecordCommand"/>.</summary>
-        </member>
-        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.SaveUserRecordCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.SaveUserRecord"/>.</summary>
-        </member>
         <member name="F:AerobicWithMe.ViewModels.MapsViewModel.goToUserRecordsListCommand">
             <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.GoToUserRecordsListCommand"/>.</summary>
         </member>
@@ -356,12 +326,6 @@
         </member>
         <member name="P:AerobicWithMe.ViewModels.MapsViewModel.LogoutCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.Logout"/>.</summary>
-        </member>
-        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.testCommandCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.TestCommandCommand"/>.</summary>
-        </member>
-        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.TestCommandCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.TestCommand(AerobicWithMe.Models.MapPin)"/>.</summary>
         </member>
         <member name="F:AerobicWithMe.ViewModels.MapsViewModel.chooseMapFromListCommand">
             <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.ChooseMapFromListCommand"/>.</summary>
@@ -404,12 +368,6 @@
         </member>
         <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ChangeConnectionStatusCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.ChangeConnectionStatus"/>.</summary>
-        </member>
-        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.urlTapCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.UrlTapCommand"/>.</summary>
-        </member>
-        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.UrlTapCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.UrlTap(System.String)"/>.</summary>
         </member>
         <member name="T:AerobicWithMe.ViewModels.EditUserRecordViewModel">
             <inheritdoc/>
@@ -459,7 +417,6 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
         </member>
         <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ConnectionStatusIcon">
             <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.connectionStatusIcon"/>
@@ -469,9 +426,6 @@
         </member>
         <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.Maps">
             <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.maps"/>
-        </member>
-        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DataExplorerLink">
-            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.dataExplorerLink"/>
         </member>
         <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.UserRecordsList">
             <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.userRecordsList"/>
@@ -551,12 +505,6 @@
         </member>
         <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ChangeConnectionStatusCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.ChangeConnectionStatus"/>.</summary>
-        </member>
-        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.urlTapCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.UrlTapCommand"/>.</summary>
-        </member>
-        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.UrlTapCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.UrlTap(System.String)"/>.</summary>
         </member>
         <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.goToMapsListCommand">
             <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.GoToMapsListCommand"/>.</summary>
@@ -808,8 +756,8 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Maps">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Maps" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DataExplorerLink">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DataExplorerLink" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InputUserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InputUserName" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InitialUserRecord">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InitialUserRecord" generated properties.</summary>
@@ -828,9 +776,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Comment">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Comment" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InputUserName">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InputUserName" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserRecordsList">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserRecordsList" generated properties.</summary>
@@ -883,8 +828,8 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Maps">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Maps" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DataExplorerLink">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DataExplorerLink" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InputUserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InputUserName" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InitialUserRecord">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InitialUserRecord" generated properties.</summary>
@@ -903,9 +848,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Comment">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Comment" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InputUserName">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InputUserName" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserRecordsList">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserRecordsList" generated properties.</summary>

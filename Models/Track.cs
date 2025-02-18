@@ -109,8 +109,11 @@ namespace AerobicWithMe.Models
 
             string trackNameToDelete = pinOfChosenMap.Mapname;
 
-            var singleton = TypeFactory.Instance;
-            singleton.SetMapPinType();
+            ObjectMongoFactory UploadObjectToMongo = new ObjectMongoFactory();
+
+            //var singleton = ObjectMongoFactory.Instance;
+            UploadObjectToMongo.CreateMapPin();
+            //singleton.SetMapPinType();
             var realm = RealmService.GetMainThreadRealm();
 
             await DeleteTrack(pinOfChosenMap);
@@ -130,8 +133,12 @@ namespace AerobicWithMe.Models
         //Delete single MapPin object from Mongodb
         private async Task DeleteSinglePin(MapPin pin)
         {
-            var singleton = TypeFactory.Instance;
-            singleton.SetMapPinType();
+
+            //var singleton = ObjectMongoFactory.Instance;
+            //singleton.SetMapPinType();
+
+            ObjectMongoFactory UploadObjectToMongo = new ObjectMongoFactory();
+            UploadObjectToMongo.CreateMapPin();
 
             var realm = RealmService.GetMainThreadRealm();
             await realm.WriteAsync(() => realm.Remove(pin));
@@ -140,8 +147,13 @@ namespace AerobicWithMe.Models
         //Delete TrackMongo1 objet from Mongodb 
         private async Task DeleteTrack(MapPin pin)
         {
-            var singleton = TypeFactory.Instance;
-            singleton.SetTrackMongoType();
+
+            //var singleton = ObjectMongoFactory.Instance;
+            //singleton.SetTrackMongoType();
+            
+            ObjectMongoFactory UploadObjectToMongo = new ObjectMongoFactory();
+            UploadObjectToMongo.CreateTrackMongo();
+
             var realm = RealmService.GetMainThreadRealm();
 
             ObjectId pinId = pin.Id; // Replace with your actual MapPin Id
@@ -229,9 +241,13 @@ namespace AerobicWithMe.Models
         {
             MapUtility mapUtility = new MapUtility(_pinsList);
 
-            var singleton = TypeFactory.Instance;
-            singleton.SetTrackMongoType();
 
+            //var singleton = ObjectMongoFactory.Instance;
+            //singleton.SetTrackMongoType();
+
+
+            ObjectMongoFactory UploadObjectToMongo = new ObjectMongoFactory();
+            UploadObjectToMongo.CreateTrackMongo();
 
             var realm = RealmService.GetMainThreadRealm();
 

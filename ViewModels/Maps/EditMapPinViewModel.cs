@@ -184,8 +184,13 @@ namespace AerobicWithMe.ViewModels
         private static bool CheckMapNameAlreadyExists(string inputTrackName)
         {
 
-            var singleton = TypeFactory.Instance;
-            singleton.SetTrackMongoType();
+            //var singleton = ObjectMongoFactory.Instance;
+            //singleton.SetTrackMongoType();
+
+            ObjectMongoFactory UploadObjectToMong = new ObjectMongoFactory();
+            UploadObjectToMong.CreateTrackMongo();
+            
+
 
             var realm = RealmService.GetMainThreadRealm();
 

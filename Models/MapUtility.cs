@@ -94,20 +94,6 @@ namespace AerobicWithMe.Models
         }
 
 
-        private Maui.GoogleMaps.Pin getPoint(double x, double y, string inputLabel, string inputAddress)
-        {
-            var position = new Location(x, y);
-            var pin = new Maui.GoogleMaps.Pin
-            {
-                Label = inputLabel,
-                Address = inputAddress,
-                Type = PinType.Place,
-                Position = new Position(position.Latitude, position.Longitude)
-            };
-
-            myMap.Pins.Add(pin);
-            return pin;
-        }
 
 
 
@@ -421,33 +407,7 @@ namespace AerobicWithMe.Models
 
 
       
-        // add new point on the map 
-        private void addPointOnMap(object sender, MapClickedEventArgs e, Maui.GoogleMaps.Map myMap)
-        {
-            Console.WriteLine($"----> Added Point to screen ");
 
-            var pin = new Maui.GoogleMaps.Pin
-            {
-                Label = "New Pin",
-                Address = "Custom Address",
-                Position = e.Point,
-                Type = PinType.Place
-            };
 
-            myMap.Pins.Add(pin);
-        }
-        public static Pin getPoint(double x, double y, string inputLabel, string inputAddress, Maui.GoogleMaps.Map myMap)
-        {
-            var position = new Location(x, y);
-            var pin1 = new Pin
-            {
-                Label = inputLabel,
-                Address = inputAddress,
-                Type = PinType.Place,
-                Position = new Position(position.Latitude, position.Longitude)
-            };
-            myMap.Pins.Add(pin1);
-            return pin1;
-        }
     }
 }

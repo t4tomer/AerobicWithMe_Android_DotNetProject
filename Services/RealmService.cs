@@ -148,12 +148,16 @@ namespace AerobicWithMe.Services
         public static Realm GetRealm()
         {
 
-            var singleton = TypeFactory.Instance;
-            
-            // Default type
-            Console.WriteLine($"Default type: {singleton.GetCurrentType().Name}");
+            //var singleton = ObjectMongoFactory.Instance;
 
-            if (singleton.GetCurrentType() == typeof(MapPin))
+
+            ObjectMongoFactory UploadObjectToMongo = new ObjectMongoFactory();
+            //UploadObjectToMongo.CreateTrackMongo();
+
+            // Default type
+            Console.WriteLine($"Default type: {UploadObjectToMongo.GetCurrentObjectType().Name}");
+
+            if (UploadObjectToMongo.GetCurrentObjectType() == typeof(MapPin))
             {
                 Console.WriteLine($"GetRealm type is MapPin");
 

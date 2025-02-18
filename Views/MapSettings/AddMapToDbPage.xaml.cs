@@ -34,9 +34,12 @@ namespace AerobicWithMe.Views
         public AddMapToDbPage(List<Maui.GoogleMaps.Pin> newPinsList, Maui.GoogleMaps.Map newMyMap)
         {
             //set singlton to mappin 
-            var singleton = TypeFactory.Instance;
-            singleton.SetMapPinType();
-            
+            //var singleton = ObjectMongoFactory.Instance;
+            //singleton.SetMapPinType();
+
+            ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();
+            uploadObjectToMongo.CreateMapPin();
+
 
             InitializeComponent();
             this.pinsList = newPinsList;

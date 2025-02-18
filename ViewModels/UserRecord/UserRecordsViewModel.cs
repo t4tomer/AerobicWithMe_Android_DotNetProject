@@ -29,8 +29,7 @@ namespace AerobicWithMe.ViewModels
         [ObservableProperty]
         private IQueryable<MapPin> maps;
 
-        [ObservableProperty]
-        public string dataExplorerLink = RealmService.DataExplorerLink;
+
 
         
         [ObservableProperty]
@@ -57,15 +56,18 @@ namespace AerobicWithMe.ViewModels
         public string _trackName = "Deafult"; // Default value
 
         private static UserRecordsViewModel _instance;
-        private static readonly object _lock = new();
-        public ICommand NavigateCommand { get; private set; }
-
+          
         public UserRecordsViewModel()
         {
 
             //set singlton to userrecord 
-            var singleton = TypeFactory.Instance;
-            singleton.SetUserRecordType();
+            //var singleton = ObjectMongoFactory.Instance;
+            //singleton.SetUserRecordType();
+
+
+            ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();
+            uploadObjectToMongo.CreateUserRecord();
+
 
             realm = RealmService.GetMainThreadRealm();
             currentUserId = RealmService.CurrentUser.Id;
@@ -108,20 +110,11 @@ namespace AerobicWithMe.ViewModels
             string userRecordComment = userRecordFromList.Comment;
 
             Console.WriteLine($"---------->>> the comment of the ShowRecord user is:{userRecordComment} ");
-            //var userRecordDetailsPage = new UserRecordDetails(); //TODO fix  problem here 
-            //await Shell.Current.Navigation.PushAsync(userRecordDetailsPage);
-
 
             var currentUserRecordDetails = new UserDetails(); //TODO fix  problem here 
             currentUserRecordDetails.setXAML_Values(userRecordFromList);
             await Shell.Current.Navigation.PushAsync(currentUserRecordDetails);
 
-            //UserRecordDetails
-
-
-
-            //userRecordDetailsPage.setUserRecord(userRecordFromList);
-            //await Shell.Current.Navigation.PushAsync(userRecordDetailsPage);//1 way 
 
             OnAppearing();
         }
@@ -177,14 +170,18 @@ namespace AerobicWithMe.ViewModels
 
 
         [RelayCommand]
-
         public async void OnAppearing()
         {
             Console.WriteLine($"----> SelectedSortOption value :{SelectedSortOption}");
-            //OnSelectedSortOptionChanged(selectedSortOption);//Show List by sorting the records
-            // Set the singleton object to UserRecord type
-            var singleton = TypeFactory.Instance;
-            singleton.SetUserRecordType();
+
+            //var singleton = ObjectMongoFactory.Instance;
+            //singleton.SetUserRecordType();
+
+
+            ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();
+            uploadObjectToMongo.CreateUserRecord();
+
+
             realm = RealmService.GetMainThreadRealm();
 
             // Check if the subscription for UserRecord type exists,if not create new subscription
@@ -238,17 +235,6 @@ namespace AerobicWithMe.ViewModels
 
             }
 
-
-
-            //-------> used for testing !!!
-
-            /*
-            Console.WriteLine($"----> Displaying all UserRecords with MapName: {_trackName}");
-            foreach (var userRecord in UserRecordsList)
-            {
-                Console.WriteLine($"Id: {userRecord.Id}, ProfileName: {userRecord.ProfileName}, OwnerId: {userRecord.OwnerId}, MapName: {userRecord.MapName}");
-            }
-            */
 
             var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
             IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;// TODO cheack this code line 
@@ -417,19 +403,11 @@ namespace AerobicWithMe.ViewModels
             ConnectionStatusIcon = isOnline ? "wifi_on.png" : "wifi_off.png";
         }
 
-        [RelayCommand]
-        public async Task UrlTap(string url)
-        {
-            await Launcher.OpenAsync(DataExplorerLink);
-        }
+
 
         private async Task<bool> CheckItemOwnership(MapPin map)
         {
-            //if (!item.IsMine)
-            //{
-            //    await DialogService.ShowAlertAsync("Error", "You cannot modify items not belonging to you", "OK");
-            //    return false;
-            //}
+
 
             return true;
         }
@@ -478,8 +456,14 @@ namespace AerobicWithMe.ViewModels
         [RelayCommand]
         public void SortUserRecords()
         {
-            var singleton = TypeFactory.Instance;
-            singleton.SetUserRecordType();
+            //var singleton = ObjectMongoFactory.Instance;
+            //singleton.SetUserRecordType();
+
+
+            ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();
+            uploadObjectToMongo.CreateUserRecord();
+
+
             realm = RealmService.GetMainThreadRealm();
 
 
