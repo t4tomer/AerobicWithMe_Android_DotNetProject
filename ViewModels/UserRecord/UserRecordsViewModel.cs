@@ -7,7 +7,7 @@ using AerobicWithMe.FiltersAndSorting;
 
 
 using Realms;
-using AerobicWithMe.Views; // Correct namespace for TestPage
+using AerobicWithMe.Views; 
 using Microsoft.Maui.Controls; // Required for navigation
 using System.Windows.Input;
 using System.Linq;
@@ -465,8 +465,7 @@ namespace AerobicWithMe.ViewModels
         [RelayCommand]
         public void SortUserRecords()
         {
-            //var singleton = ObjectMongoFactory.Instance;
-            //singleton.SetUserRecordType();
+
 
 
             ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();

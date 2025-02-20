@@ -7,6 +7,7 @@ using AerobicWithMe.Models;
 
 namespace AerobicWithMe.Interfaces
 {
+    //this class is consideres as the SortingStrategy  interface 
     public interface IUserRecordSorter
     {
         IQueryable<UserRecord> Sort(IQueryable<UserRecord> records);
