@@ -126,7 +126,7 @@
                     Text="Create Track"
                     FontSize="12"
                     Padding="5,0,5,10"
-                    Command="{Binding ToMapPageCommand}"
+                    Command="{Binding CreateNewTrackCommand}"
                     BackgroundColor="Teal" />
 
             <!-- Show All User Records Button -->

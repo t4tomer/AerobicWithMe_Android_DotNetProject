@@ -105,11 +105,11 @@ namespace AerobicWithMe.ViewModels
 
         // used to user record   from the user recorods list 
         [RelayCommand]
-        public async Task ShowRecord(UserRecord userRecordFromList)
+        public async Task ChooseRecordFromList(UserRecord userRecordFromList)
         {
             string userRecordComment = userRecordFromList.Comment;
 
-            Console.WriteLine($"---------->>> the comment of the ShowRecord user is:{userRecordComment} ");
+            Console.WriteLine($"---------->>> the comment of the ChooseRecordFromList user is:{userRecordComment} ");
 
             var currentUserRecordDetails = new UserDetails(); //TODO fix  problem here 
             currentUserRecordDetails.setXAML_Values(userRecordFromList);
@@ -290,7 +290,7 @@ namespace AerobicWithMe.ViewModels
 
         // used to transfer the user to the map page 
         [RelayCommand]
-        public async Task ToMapPage()
+        public async Task CreateNewTrack()
         {
    
 

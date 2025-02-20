@@ -192,7 +192,7 @@ namespace AerobicWithMe.Views
         [RelayCommand]
 
         //upload new user record to mongodb 
-        public async Task UpLoadToMongo()
+        public async Task UpLoadUserRecordObject()
         {
 
             if (string.IsNullOrEmpty(_inputUserName))

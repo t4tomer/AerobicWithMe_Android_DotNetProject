@@ -206,9 +206,9 @@ namespace AerobicWithMe.ViewModels
 
         //TODO nned to fix this method 
         [RelayCommand]
-        public async Task UploadToCloudPins()
+        public async Task UploadMapPinAndTrackObject()
         {
-            Console.WriteLine($"UploadToCloudPins maptrack name is: {InputTrackName}");
+            Console.WriteLine($"UploadMapPinAndTrackObject() maptrack name is: {InputTrackName}");
 
             if (string.IsNullOrEmpty(InputTrackName))
             {

@@ -267,11 +267,11 @@
         <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.PrintListCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.PrintList"/>.</summary>
         </member>
-        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.uploadToCloudPinsCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadToCloudPinsCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.uploadMapPinAndTrackObjectCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadMapPinAndTrackObjectCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadToCloudPinsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadToCloudPins"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadMapPinAndTrackObjectCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadMapPinAndTrackObject"/>.</summary>
         </member>
         <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.cancelCommand">
             <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.CancelCommand"/>.</summary>
@@ -333,11 +333,11 @@
         <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ChooseMapFromListCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.ChooseMapFromList(AerobicWithMe.Models.MapPin)"/>.</summary>
         </member>
-        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.toMapPageCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.ToMapPageCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.createNewTrackCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.CreateNewTrackCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ToMapPageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.ToMapPage"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.CreateNewTrackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.CreateNewTrack"/>.</summary>
         </member>
         <member name="F:AerobicWithMe.ViewModels.MapsViewModel.deleteMapCommand">
             <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.DeleteMapCommand"/>.</summary>
@@ -452,11 +452,11 @@
         <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteUserRecordCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteUserRecord(AerobicWithMe.Models.UserRecord)"/>.</summary>
         </member>
-        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.showRecordCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ShowRecordCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.chooseRecordFromListCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ChooseRecordFromListCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ShowRecordCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.ShowRecord(AerobicWithMe.Models.UserRecord)"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ChooseRecordFromListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.ChooseRecordFromList(AerobicWithMe.Models.UserRecord)"/>.</summary>
         </member>
         <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.appearingCommand">
             <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.AppearingCommand"/>.</summary>
@@ -470,11 +470,11 @@
         <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.LogoutCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.Logout"/>.</summary>
         </member>
-        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.toMapPageCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ToMapPageCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.createNewTrackCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.CreateNewTrackCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ToMapPageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.ToMapPage"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.CreateNewTrackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.CreateNewTrack"/>.</summary>
         </member>
         <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.deleteMapCommand">
             <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteMapCommand"/>.</summary>
@@ -579,11 +579,11 @@
         <member name="T:AerobicWithMe.Views.AddRecordToDb">
             <inheritdoc/>
         </member>
-        <member name="F:AerobicWithMe.Views.AddRecordToDb.upLoadToMongoCommand">
-            <summary>The backing field for <see cref="P:AerobicWithMe.Views.AddRecordToDb.UpLoadToMongoCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.AddRecordToDb.upLoadUserRecordObjectCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.AddRecordToDb.UpLoadUserRecordObjectCommand"/>.</summary>
         </member>
-        <member name="P:AerobicWithMe.Views.AddRecordToDb.UpLoadToMongoCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.AddRecordToDb.UpLoadToMongo"/>.</summary>
+        <member name="P:AerobicWithMe.Views.AddRecordToDb.UpLoadUserRecordObjectCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.AddRecordToDb.UpLoadUserRecordObject"/>.</summary>
         </member>
         <member name="T:AerobicWithMe.Views.TimerPage">
             <inheritdoc/>

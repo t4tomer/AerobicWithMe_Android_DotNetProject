@@ -275,7 +275,7 @@ namespace AerobicWithMe.ViewModels
 
         // used to transfer the user to the map page 
         [RelayCommand]
-        public async Task ToMapPage()
+        public async Task CreateNewTrack()
         {
 
 

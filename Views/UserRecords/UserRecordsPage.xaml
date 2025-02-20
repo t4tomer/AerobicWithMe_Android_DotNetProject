@@ -117,7 +117,7 @@
                                          VerticalOptions="Center">
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer 
-                                        Command="{Binding Path=BindingContext.ShowRecordCommand, Source={x:Reference RecordsList}}"
+                                        Command="{Binding Path=BindingContext.ChooseRecordFromListCommand, Source={x:Reference RecordsList}}"
                                         CommandParameter="{Binding .}" />
                                 </StackLayout.GestureRecognizers>
 
