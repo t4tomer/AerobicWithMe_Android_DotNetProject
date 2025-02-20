@@ -2,6 +2,10 @@
 using CommunityToolkit.Mvvm.Input;
 using AerobicWithMe.Models;
 using AerobicWithMe.Services;
+
+using AerobicWithMe.FiltersAndSorting;
+
+
 using Realms;
 using AerobicWithMe.Views; // Correct namespace for TestPage
 using Microsoft.Maui.Controls; // Required for navigation
@@ -12,6 +16,7 @@ using DocumentFormat.OpenXml.Drawing.Diagrams;
 using Position = Maui.GoogleMaps.Position;
 using Realms.Sync;
 using System.Globalization;
+using static Android.Icu.Text.AlphabeticIndex;
 //using WebKit;
 
 
@@ -440,10 +445,14 @@ namespace AerobicWithMe.ViewModels
 
                 UserRecordsList = getUserRecrodsWithTheSameTrackName();
 
+                /*
+                // used for testing 
                 foreach (var userRecord in UserRecordsList)
                 {
                     Console.WriteLine($"ProfileName(Default or Uploaddate): {userRecord.ProfileName}, Upload Date: {userRecord.UploadDateTime}");
                 }
+
+                */
 
 
                 return;
@@ -466,46 +475,20 @@ namespace AerobicWithMe.ViewModels
 
             realm = RealmService.GetMainThreadRealm();
 
+            IQueryable<UserRecord> records = getUserRecrodsWithTheSameTrackName();
 
             if (SelectedSortOption == "Record Time")
             {
-                Console.WriteLine($"=======>>>  sorting by Record Time!!!!");
 
-
-
-                var userRecordsList = getUserRecrodsWithTheSameTrackName().ToList();
-
-
-                // Sort the user records with same map name by track time
-                var sortedUserRecords = userRecordsList
-                    .Where(record => TimeSpan.TryParse(record.TrackTime, out _)) // Ensure valid times
-                    .OrderBy(record => TimeSpan.Parse(record.TrackTime))
-                    .ToList();
-
-                UserRecordsList = sortedUserRecords.AsQueryable();
-
-                //used for testing 
-                foreach (var userRecord in sortedUserRecords)
-                {
-                    Console.WriteLine($"ProfileName: {userRecord.ProfileName}, Record Time: {userRecord.TrackTime}");
-                }
-
-
-
+                // Change strategy to SortByRecordTime
+                var sortingContext = new SortingContext(new SortByRecordTime());
+                UserRecordsList = sortingContext.SortUsersRecords(records);
             }
             else if (SelectedSortOption == "Profile Name")
             {
-                Console.WriteLine($"=======>>> sort by Profile name !!!!");
-
-                var sortedUserRecords = UserRecordsList.OrderBy(record => record.ProfileName);
-
-                foreach (var userRecord in sortedUserRecords)
-                {
-                    Console.WriteLine($"ProfileName: {userRecord.ProfileName}, Upload Date: {userRecord.UploadDateTime}");
-                }
-
-                UserRecordsList = sortedUserRecords.AsQueryable();
-
+                // Change strategy to SortByProfileName
+                var sortingContext = new SortingContext(new SortByProfileName());
+                UserRecordsList = sortingContext.SortUsersRecords(records);
 
             }
         }
