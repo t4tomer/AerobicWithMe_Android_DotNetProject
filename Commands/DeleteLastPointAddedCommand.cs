@@ -19,17 +19,18 @@ namespace AerobicWithMe.Commands
         {
             currentMap = mapService;
             pinsList=currentMap.Pins.ToList();
+
+            MapHelperObject = new MapUtility(pinsList, currentMap);
+
+
         }
 
         public async Task Execute()
         {
-            await removeLastPointAddedOnMap(pinsList);
+             MapHelperObject.deleteLastPoint(pinsList);
+   
         }
 
-        private async Task removeLastPointAddedOnMap(List<Maui.GoogleMaps.Pin>  pinsList)
-        {
-            MapHelperObject.deleteLastPoint(pinsList);
-        }
 
 
  

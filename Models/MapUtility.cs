@@ -47,6 +47,11 @@ namespace AerobicWithMe.Models
             this.myMap = myMap;
         }
 
+        public void setPinList(List<Pin> pinsList)
+        {
+            this.pinsList = pinsList;
+        }
+
 
         public void addPointsToTrack()
         {

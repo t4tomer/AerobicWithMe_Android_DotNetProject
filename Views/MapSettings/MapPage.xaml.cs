@@ -207,11 +207,9 @@ namespace AerobicWithMe.Views
 
         public async Task DeletLastPointButton_Pressed()
         {
-            //List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
 
-            //Console.WriteLine($" \t\t-->Number of pins:(MapPage)" + pinsList.Count);
 
-            //MapHelperObject.deleteLastPoint(pinsList);
+            //Command Design Pattern
 
             DeleteLastPointAddedCommand command = new DeleteLastPointAddedCommand(myMap);
             _buttonInvoker.SetCommand(command);
