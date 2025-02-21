@@ -19,6 +19,7 @@ using Microsoft.Maui.Controls; // Required for navigation
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using AerobicWithMe.Commands;
 //using static Xamarin.Google.Crypto.Tink.Shaded.Protobuf.Internal;
 
 
@@ -34,6 +35,10 @@ namespace AerobicWithMe.Views
         public bool _canAddPins = true; // Controls if pins can be added
         private string _mapTitle = ""; // Default value
         int strokeColorPolyline = 0;
+        private readonly ButtonInvoker _buttonInvoker = new ButtonInvoker();
+
+        //private ButtonInvoker _buttonInvoker;
+
 
         public ICommand NavigateCommand { get; private set; }
         int randomNumberTest = 1;
@@ -144,60 +149,13 @@ namespace AerobicWithMe.Views
             int pointCount = myMap.Pins.Count;
             Console.WriteLine($"----> Number of points on the map!!!: {pointCount}");
         }
-        // create random number 
-        //public int GenerateRandomNumber()
-        //{
-        //    Random random = new Random();
-        //    int randomNumber = random.Next(1, 1000); // The upper bound is exclusive, so use 1000 to get numbers from 1 to 999
-        //    return randomNumber;
-        //}
-        // method that is used to zoom to my location
-        public async Task<Location> GetCurrentLocation()
-        {
-            try
-            {
-                _isCheckingLocation = true;
 
-                GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
-
-                _cancelTokenSource = new CancellationTokenSource();
-
-                Location location = await Geolocation.Default.GetLocationAsync(request, _cancelTokenSource.Token);
-
-                if (location != null)
-                {
-                    Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
-                    CenterMap(location.Latitude, location.Longitude);
-
-                }
-
-                return location;
-            }
-            catch (Exception ex)
-            {
-                // Unable to get location
-                Console.WriteLine($"An error occurred: {ex.Message}");
-                return null;
-            }
-            finally
-            {
-                _isCheckingLocation = false;
-            }
-        }
 
 
         public void CancelRequest()
         {
             if (_isCheckingLocation && _cancelTokenSource != null && _cancelTokenSource.IsCancellationRequested == false)
                 _cancelTokenSource.Cancel();
-        }
-        // zoom the google map to the cordinates- of x and y 
-        private void CenterMap(double x, double y)
-        {
-            //var position = new Position(31.268333463883636, 34.80691033370654);
-            var position = new Position(x, y);
-            var mapSpan = Maui.GoogleMaps.MapSpan.FromCenterAndRadius(position, Maui.GoogleMaps.Distance.FromMeters(1)); // Adjust the radius as needed
-            myMap.MoveToRegion(mapSpan);
         }
 
 
@@ -208,17 +166,26 @@ namespace AerobicWithMe.Views
         [RelayCommand]
         public async Task GoToTimerPageButton_Pressed()//transfer to timer page
         {
-            // Navigate to the singleton instance of TimerPage
-            var timerPage = TimerPage.GetInstance;
-            timerPage.setTitle(_mapTitle);
-            await Shell.Current.Navigation.PushAsync(timerPage);
+
+            // use the Command Design Pattern
+            NavigateToTimerPageCommand command = new NavigateToTimerPageCommand(_mapTitle);
+            _buttonInvoker.SetCommand(command);
+            await _buttonInvoker.PressButton();
+
+
         }
 
 
         [RelayCommand]
         public async Task ZoomToMyLocationButton_Pressed()
         {
-            GetCurrentLocation();
+            //Command Design Pattern
+            ZoomToMyLocationCommand command = new ZoomToMyLocationCommand(myMap);
+            _buttonInvoker.SetCommand(command);
+            await _buttonInvoker.PressButton();
+
+
+
 
         }
 
@@ -227,19 +194,11 @@ namespace AerobicWithMe.Views
         public async Task GoToUserRecordsListButton_Pressed()
         {
 
-            UserRecordsViewModel userRecordsVM_Page = new UserRecordsViewModel();
+            //Command Design Pattern
 
-            userRecordsVM_Page.setTrackName(_mapTitle);
-
-            // Create a new instance of the UserRecordsPage and bind it to the ViewModel
-            var userRecordsPage = new UserRecordsPage
-            {
-                BindingContext = userRecordsVM_Page
-            };
-
-            // Navigate to the page
-            await Navigation.PushAsync(userRecordsPage);
-
+            NavigateToRecordsListPageCommand command = new NavigateToRecordsListPageCommand(_mapTitle);
+            _buttonInvoker.SetCommand(command);
+            await _buttonInvoker.PressButton();
 
         }
 
@@ -248,11 +207,17 @@ namespace AerobicWithMe.Views
 
         public async Task DeletLastPointButton_Pressed()
         {
-            List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
+            //List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
 
-            Console.WriteLine($" \t\t-->Number of pins:(MapPage)" + pinsList.Count);
+            //Console.WriteLine($" \t\t-->Number of pins:(MapPage)" + pinsList.Count);
 
-            MapHelperObject.deleteLastPoint(pinsList);
+            //MapHelperObject.deleteLastPoint(pinsList);
+
+            DeleteLastPointAddedCommand command = new DeleteLastPointAddedCommand(myMap);
+            _buttonInvoker.SetCommand(command);
+            await _buttonInvoker.PressButton();
+
+
         }
 
 

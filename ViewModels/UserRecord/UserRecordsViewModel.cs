@@ -16,7 +16,6 @@ using DocumentFormat.OpenXml.Drawing.Diagrams;
 using Position = Maui.GoogleMaps.Position;
 using Realms.Sync;
 using System.Globalization;
-using static Android.Icu.Text.AlphabeticIndex;
 //using WebKit;
 
 
