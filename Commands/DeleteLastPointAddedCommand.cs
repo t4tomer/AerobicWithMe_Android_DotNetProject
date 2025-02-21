@@ -32,8 +32,5 @@ namespace AerobicWithMe.Commands
         }
 
 
-
- 
-
     }
 }

@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\aerobicwithmeapp\\aerobicwithme_android_dotnetproject\\commands\\deletelastpointaddedcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:commands\\deletelastpointaddedcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\aerobicwithmeapp\\aerobicwithme_android_dotnetproject\\commands\\navigatetouploadtrackpagecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:commands\\navigatetouploadtrackpagecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\aerobicwithmeapp\\aerobicwithme_android_dotnetproject\\views\\mapsettings\\mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\mapsettings\\mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\aerobicwithmeapp\\aerobicwithme_android_dotnetproject\\commands\\navigatetotimerpagecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:commands\\navigatetotimerpagecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\aerobicwithmeapp\\aerobicwithme_android_dotnetproject\\commands\\zoomtomylocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:commands\\zoomtomylocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\aerobicwithmeapp\\aerobicwithme_android_dotnetproject\\interfaces\\i_command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:interfaces\\i_command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\aerobicwithmeapp\\aerobicwithme_android_dotnetproject\\models\\maputility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:models\\maputility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\aerobicwithmeapp\\aerobicwithme_android_dotnetproject\\interfaces\\i_command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:interfaces\\i_command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\aerobicwithmeapp\\aerobicwithme_android_dotnetproject\\viewmodels\\userrecord\\userrecordsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -64,14 +68,27 @@
               "RelativeDocumentMoniker": "Views\\MapSettings\\MapPage.xaml.cs",
               "ToolTip": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Views\\MapSettings\\MapPage.xaml.cs",
               "RelativeToolTip": "Views\\MapSettings\\MapPage.xaml.cs",
-              "ViewState": "AQIAAM8AAAAAAAAAAAA1wN8AAAAtAAAA",
+              "ViewState": "AQIAAIYBAAAAAAAAAAAswJYBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T07:48:06.325Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
+              "Title": "NavigateToTimerPageCommand.cs",
+              "DocumentMoniker": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Commands\\NavigateToTimerPageCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\NavigateToTimerPageCommand.cs",
+              "ToolTip": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Commands\\NavigateToTimerPageCommand.cs",
+              "RelativeToolTip": "Commands\\NavigateToTimerPageCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T12:41:38.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ButtonInvoker.cs",
               "DocumentMoniker": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Commands\\ButtonInvoker.cs",
               "RelativeDocumentMoniker": "Commands\\ButtonInvoker.cs",
@@ -79,25 +96,24 @@
               "RelativeToolTip": "Commands\\ButtonInvoker.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAIBJwBcAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:56:41.336Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-21T07:56:41.336Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ZoomToMyLocationCommand.cs",
               "DocumentMoniker": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Commands\\ZoomToMyLocationCommand.cs",
               "RelativeDocumentMoniker": "Commands\\ZoomToMyLocationCommand.cs",
               "ToolTip": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Commands\\ZoomToMyLocationCommand.cs",
               "RelativeToolTip": "Commands\\ZoomToMyLocationCommand.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwBYAAAAkAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T08:59:44.546Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "UserRecordsPage.xaml",
               "DocumentMoniker": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Views\\UserRecords\\UserRecordsPage.xaml",
               "RelativeDocumentMoniker": "Views\\UserRecords\\UserRecordsPage.xaml",
@@ -105,12 +121,11 @@
               "RelativeToolTip": "Views\\UserRecords\\UserRecordsPage.xaml",
               "ViewState": "AQIAAGwAAAAAAAAAAAAMwH4AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-20T09:51:31.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T09:51:31.881Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "EditMapPinViewModel.cs",
               "DocumentMoniker": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\ViewModels\\Maps\\EditMapPinViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\Maps\\EditMapPinViewModel.cs",
@@ -118,12 +133,11 @@
               "RelativeToolTip": "ViewModels\\Maps\\EditMapPinViewModel.cs",
               "ViewState": "AQIAAMUAAAAAAAAAAAAMwMsAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T09:15:22.326Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T09:15:22.326Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MapsPage.xaml",
               "DocumentMoniker": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Views\\MapPin\\MapsPage.xaml",
               "RelativeDocumentMoniker": "Views\\MapPin\\MapsPage.xaml",
@@ -131,12 +145,11 @@
               "RelativeToolTip": "Views\\MapPin\\MapsPage.xaml",
               "ViewState": "AQIAAHMAAAAAAAAAAAAMwIAAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-20T09:09:02.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T09:09:02.329Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AddMapToDbPage.xaml",
               "DocumentMoniker": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Views\\MapSettings\\AddMapToDbPage.xaml",
               "RelativeDocumentMoniker": "Views\\MapSettings\\AddMapToDbPage.xaml",
@@ -151,11 +164,24 @@
         },
         {
           "DockedWidth": 343,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NavigateToUploadTrackPageCommand.cs",
+              "DocumentMoniker": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Commands\\NavigateToUploadTrackPageCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\NavigateToUploadTrackPageCommand.cs",
+              "ToolTip": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Commands\\NavigateToUploadTrackPageCommand.cs",
+              "RelativeToolTip": "Commands\\NavigateToUploadTrackPageCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T12:32:50.09Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -165,27 +191,14 @@
               "RelativeDocumentMoniker": "Models\\MapUtility.cs",
               "ToolTip": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Models\\MapUtility.cs",
               "RelativeToolTip": "Models\\MapUtility.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T09:57:23.691Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DeleteLastPointAddedCommand.cs",
-              "DocumentMoniker": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Commands\\DeleteLastPointAddedCommand.cs",
-              "RelativeDocumentMoniker": "Commands\\DeleteLastPointAddedCommand.cs",
-              "ToolTip": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Commands\\DeleteLastPointAddedCommand.cs",
-              "RelativeToolTip": "Commands\\DeleteLastPointAddedCommand.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwCEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T09:01:39.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "I_Command.cs",
               "DocumentMoniker": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\Interfaces\\I_Command.cs",
               "RelativeDocumentMoniker": "Interfaces\\I_Command.cs",
@@ -193,12 +206,11 @@
               "RelativeToolTip": "Interfaces\\I_Command.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:53:16.696Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-21T07:53:16.696Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UserRecordsViewModel.cs",
               "DocumentMoniker": "D:\\GitHub\\AerobicWithMeApp\\AerobicWithMe_Android_DotNetProject\\ViewModels\\UserRecord\\UserRecordsViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\UserRecord\\UserRecordsViewModel.cs",
@@ -206,8 +218,7 @@
               "RelativeToolTip": "ViewModels\\UserRecord\\UserRecordsViewModel.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T10:19:06.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T10:19:06.854Z"
             }
           ]
         }

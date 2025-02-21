@@ -208,14 +208,10 @@ namespace AerobicWithMe.Views
         public async Task DeletLastPointButton_Pressed()
         {
 
-
             //Command Design Pattern
-
             DeleteLastPointAddedCommand command = new DeleteLastPointAddedCommand(myMap);
             _buttonInvoker.SetCommand(command);
             await _buttonInvoker.PressButton();
-
-
         }
 
 
@@ -223,19 +219,10 @@ namespace AerobicWithMe.Views
 
         public async Task AddToCloudButton_Pressed()
         {
-
-            Console.WriteLine($"-->AddToCloud_Clicked ");
-
-            //AddMapToDbPage
-            List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
-            int pinCount = pinsList.Count;
-            if (await EnoughPins(pinCount))
-            {
-                MapHelperObject = new MapUtility(pinsList, myMap);
-                //MapHelperObject.PrintPinAddresses();// used for testing
-                var AddToCloud = new AddMapToDbPage(pinsList, myMap);
-                await Navigation.PushAsync(AddToCloud);
-            }
+            //Command Design Pattern
+            NavigateToUploadTrackPageCommand command = new NavigateToUploadTrackPageCommand(myMap);
+            _buttonInvoker.SetCommand(command);
+            await _buttonInvoker.PressButton();
         }
 
 
