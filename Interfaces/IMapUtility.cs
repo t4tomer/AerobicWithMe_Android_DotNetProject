@@ -19,6 +19,9 @@ namespace AerobicWithMe.Interfaces
         public string getCurrentTime();
         public string getCurrentDate();
 
+        public  Task<bool> enoughPins(int num);
+
+
 
     }
 }

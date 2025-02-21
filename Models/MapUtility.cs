@@ -158,7 +158,21 @@ namespace AerobicWithMe.Models
             }
         }
 
+        public async Task<bool> enoughPins(int num)
+        {
+            if (num == 0)
+            {
+                await DialogService.ShowAlertAsync("Error", "Not Enough Pins(add at least 2 points).", "OK");
+                return false;
+            }
+            else if (num == 1)
+            {
+                await DialogService.ShowAlertAsync("Error", "Not Enough Pins(add 1 more point).", "OK");
+                return false;
+            }
+            return true;
 
+        }
         private void removePolylineBetweenPins( Maui.GoogleMaps.Pin pin1, Maui.GoogleMaps.Pin pin2)
         {
 

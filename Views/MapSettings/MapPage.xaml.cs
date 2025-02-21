@@ -233,22 +233,11 @@ namespace AerobicWithMe.Views
         {
 
 
-            List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
-            int pinCount = pinsList.Count;
-            if (await EnoughPins(pinCount))
-            {
-                //MapHelperObject = new MapHelper(pinsList,myMap); // Initialize m in the constructor
-
-                MapHelperObject.setPinsList(pinsList);
-                double totalDistance = MapHelperObject.calculateTotalDistance();
 
 
-                // Create an instance of TestPage and pass the total distance
-                var currentDistancePage = new DistancePage(totalDistance, pinsList, MapHelperObject);
-
-                // Navigate to the TestPage
-                await Navigation.PushAsync(currentDistancePage);
-            }
+            NavigateToDistancePageCommand command = new NavigateToDistancePageCommand(myMap);
+            _buttonInvoker.SetCommand(command);
+            await _buttonInvoker.PressButton();
 
 
         }
@@ -269,16 +258,13 @@ namespace AerobicWithMe.Views
 
         public async Task EditPointButton_Pressed()
         {
-            Console.WriteLine($"----> Edit Point clicked ");
 
-            List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
-            int pinCount = pinsList.Count;
-            //Console.WriteLine($"number of pins in the list(Add_Point_Clicked): -->'{pinCount}': {pinCount}");
 
-            var EditPinAddrPage = new EditPinAddr(pinsList, myMap);
-            //EditPinAddrPage.setMapName(MapTitle);
-            //! Pass the pinsList directly when navigating to the triggerPage
-            await Navigation.PushAsync(EditPinAddrPage);
+            ////Command Design Pattern
+            NavigateToEditPointCommand command = new NavigateToEditPointCommand(myMap);
+            _buttonInvoker.SetCommand(command);
+            await _buttonInvoker.PressButton();
+
 
         }
 
@@ -326,6 +312,7 @@ namespace AerobicWithMe.Views
         }
 
         // Print all addresses of the points 
+        /* //used for testing 
         private void PrintPinAddresses(object sender, MapClickedEventArgs e)
         {
             var pins = myMap.Pins.ToList();
@@ -334,6 +321,7 @@ namespace AerobicWithMe.Views
                 Console.WriteLine($"Address of pin22 -->'{pin.Label}': {pin.Address}");
             }
         }
+        */
 
 
 
@@ -386,97 +374,23 @@ namespace AerobicWithMe.Views
 
 
 
-        // cheack if there are enought opins on the track in order to upload it .
-        private async Task<bool> EnoughPins(int num)
-        {
-            if (num == 0)
-            {
-                await DialogService.ShowAlertAsync("Error", "Not Enough Pins(add at least 2 points).", "OK");
-                return false;
-            }
-            else if (num == 1)
-            {
-                await DialogService.ShowAlertAsync("Error", "Not Enough Pins(add 1 more point).", "OK");
-                return false;
-            }
-            return true;
-
-        }
-
 
 
         public void ClearMap()
         {
-            Console.WriteLine($"----> Remove all Points  ");
-            // Clear all pins from the map
             myMap.Pins.Clear();
-            // Clear all polylines from the map
             myMap.Polylines.Clear();
 
-            Console.WriteLine("----> All pins and polylines have been cleared.");
         }
 
 
 
 
 
-        private async void toPage(string pageName)
-        {
-            Debug.WriteLine("toPage function!!!!"); // Write a debug message indicating the method was called
-
-            // Construct the full type name including namespace
-            string fullTypeName = $"MauiGoogleMapsSample.{pageName}";
-
-            // Get the Type object based on the full type name
-            Type pageType = Type.GetType(fullTypeName);
-
-            if (pageType != null)
-            {
-                // Check if NavigateCommand can execute with this Type
-                if (NavigateCommand.CanExecute(pageType))
-                {
-                    NavigateCommand.Execute(pageType);
-                }
-            }
-            else
-            {
-                Debug.WriteLine($"Page type '{pageName}' not found.");
-            }
-        }
-
-        // Method to calculate distance between two pins
-        private double GetDistance(Maui.GoogleMaps.Pin p1, Maui.GoogleMaps.Pin p2)
-        {
-            // Access the Position property of each Pin
-            var pos1 = p1.Position;
-            var pos2 = p2.Position;
-
-            // Convert Position to Location
-            Location loc1 = new Location(pos1.Latitude, pos1.Longitude);
-            Location loc2 = new Location(pos2.Latitude, pos2.Longitude);
-
-            // Calculate the distance using Location.CalculateDistance
-            double distance = Location.CalculateDistance(loc1, loc2, DistanceUnits.Kilometers);
-            Console.WriteLine($"----> Distance between p1 and p2: {distance} km");
-
-            return distance;
-        }
+   
 
 
 
-        private Maui.GoogleMaps.Pin getPoint(double x, double y, string inputLabel, string inputAddress)
-        {
-            var position = new Location(x, y);
-            var pin = new Maui.GoogleMaps.Pin
-            {
-                Label = inputLabel,
-                Address = inputAddress,
-                Type = PinType.Place,
-                Position = new Position(position.Latitude, position.Longitude)
-            };
 
-            myMap.Pins.Add(pin);
-            return pin;
-        }
     }
 }

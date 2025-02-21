@@ -24,9 +24,11 @@ namespace AerobicWithMe.Commands
         public async Task Execute()
         {
             int numOfPins = currentMap.Pins.ToList().Count;
-            if (await EnoughPins(numOfPins))
+            MapHelperObject = new MapUtility(currentMap);
+           Task <bool> enoughPins = MapHelperObject.enoughPins(numOfPins);
+
+            if (await enoughPins)
             {
-                MapHelperObject = new MapUtility(currentMap);
                 List<Maui.GoogleMaps.Pin> pinsList = currentMap.Pins.ToList();
                 var AddToCloud = new AddMapToDbPage(pinsList, currentMap);
                 await Shell.Current.Navigation.PushAsync(AddToCloud);
@@ -35,21 +37,6 @@ namespace AerobicWithMe.Commands
         }
 
 
-        private async Task<bool> EnoughPins(int num)
-        {
-            if (num == 0)
-            {
-                await DialogService.ShowAlertAsync("Error", "Not Enough Pins(add at least 2 points).", "OK");
-                return false;
-            }
-            else if (num == 1)
-            {
-                await DialogService.ShowAlertAsync("Error", "Not Enough Pins(add 1 more point).", "OK");
-                return false;
-            }
-            return true;
-
-        }
 
 
     }
