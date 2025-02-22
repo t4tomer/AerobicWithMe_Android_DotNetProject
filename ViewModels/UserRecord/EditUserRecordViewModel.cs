@@ -65,11 +65,11 @@ namespace AerobicWithMe.ViewModels
         {
             Console.WriteLine($"----> empty constructor,EditMapPinViewModel");
 
-            //var singleton = ObjectMongoFactory.Instance;
+            //var singleton = SetObjectToUpload.Instance;
             //singleton.SetUserRecordType();
 
 
-            ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();
+            SetObjectToUpload uploadObjectToMongo = new SetObjectToUpload();
             uploadObjectToMongo.CreateUserRecord();
 
 
@@ -127,11 +127,11 @@ namespace AerobicWithMe.ViewModels
             string InputUploadDateTime = newUserRecord.UploadDateTime;
             string InputCommentText = newUserRecord.Comment;
 
-            //var singleton = ObjectMongoFactory.Instance;
+            //var singleton = SetObjectToUpload.Instance;
             //singleton.SetUserRecordType();
 
 
-            ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();
+            SetObjectToUpload uploadObjectToMongo = new SetObjectToUpload();
             uploadObjectToMongo.CreateUserRecord();
 
 

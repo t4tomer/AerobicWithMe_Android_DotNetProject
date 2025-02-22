@@ -148,10 +148,10 @@ namespace AerobicWithMe.Services
         public static Realm GetRealm()
         {
 
-            //var singleton = ObjectMongoFactory.Instance;
+            //var singleton = SetObjectToUpload.Instance;
 
 
-            ObjectMongoFactory UploadObjectToMongo = new ObjectMongoFactory();
+            SetObjectToUpload UploadObjectToMongo = new SetObjectToUpload();
             //UploadObjectToMongo.CreateTrackMongo();
 
             // Default type

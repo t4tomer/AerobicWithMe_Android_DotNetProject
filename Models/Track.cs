@@ -6,6 +6,8 @@ using AerobicWithMe.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using AerobicWithMe.Services;
+using AerobicWithMe.Interfaces;
+
 using AerobicWithMe.ViewModels;
 
 using Position = Maui.GoogleMaps.Position;
@@ -17,19 +19,7 @@ using System.Numerics;
 
 namespace AerobicWithMe.Models
 {
-    // Observer Interface (Observer)
-    public interface ITrackObserver
-    {
-        void OnTrackUpdated(Track track);
-    }
 
-    // Subject Interface (Subject)
-    public interface ITrackSubject
-    {
-        void Attach(ITrackObserver observer);
-        void Detach(ITrackObserver observer);
-        void Notify();
-    }
 
     // Concrete Subject (Concrete implementation of Subject)
 
@@ -109,9 +99,9 @@ namespace AerobicWithMe.Models
 
             string trackNameToDelete = pinOfChosenMap.Mapname;
 
-            ObjectMongoFactory UploadObjectToMongo = new ObjectMongoFactory();
+            SetObjectToUpload UploadObjectToMongo = new SetObjectToUpload();
 
-            //var singleton = ObjectMongoFactory.Instance;
+            //var singleton = SetObjectToUpload.Instance;
             UploadObjectToMongo.CreateMapPin();
             //singleton.SetMapPinType();
             var realm = RealmService.GetMainThreadRealm();
@@ -134,10 +124,10 @@ namespace AerobicWithMe.Models
         private async Task DeleteSinglePin(MapPin pin)
         {
 
-            //var singleton = ObjectMongoFactory.Instance;
+            //var singleton = SetObjectToUpload.Instance;
             //singleton.SetMapPinType();
 
-            ObjectMongoFactory UploadObjectToMongo = new ObjectMongoFactory();
+            SetObjectToUpload UploadObjectToMongo = new SetObjectToUpload();
             UploadObjectToMongo.CreateMapPin();
 
             var realm = RealmService.GetMainThreadRealm();
@@ -148,10 +138,10 @@ namespace AerobicWithMe.Models
         private async Task DeleteTrack(MapPin pin)
         {
 
-            //var singleton = ObjectMongoFactory.Instance;
+            //var singleton = SetObjectToUpload.Instance;
             //singleton.SetTrackMongoType();
             
-            ObjectMongoFactory UploadObjectToMongo = new ObjectMongoFactory();
+            SetObjectToUpload UploadObjectToMongo = new SetObjectToUpload();
             UploadObjectToMongo.CreateTrackMongo();
 
             var realm = RealmService.GetMainThreadRealm();
@@ -242,11 +232,11 @@ namespace AerobicWithMe.Models
             MapUtility mapUtility = new MapUtility(_pinsList);
 
 
-            //var singleton = ObjectMongoFactory.Instance;
+            //var singleton = SetObjectToUpload.Instance;
             //singleton.SetTrackMongoType();
 
 
-            ObjectMongoFactory UploadObjectToMongo = new ObjectMongoFactory();
+            SetObjectToUpload UploadObjectToMongo = new SetObjectToUpload();
             UploadObjectToMongo.CreateTrackMongo();
 
             var realm = RealmService.GetMainThreadRealm();
@@ -304,7 +294,9 @@ namespace AerobicWithMe.Models
 
     }
 
-    // Concrete Observer (Concrete implementation of Observer)
+
+
+    // part of the Observor Design Pattern-->Concrete Observer (Concrete implementation of Observer)
     public class TrackLogger : ITrackObserver
     {
         public void OnTrackUpdated(Track track)

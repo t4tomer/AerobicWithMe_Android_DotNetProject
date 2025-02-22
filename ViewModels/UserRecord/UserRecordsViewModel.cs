@@ -65,11 +65,11 @@ namespace AerobicWithMe.ViewModels
         {
 
             //set singlton to userrecord 
-            //var singleton = ObjectMongoFactory.Instance;
+            //var singleton = SetObjectToUpload.Instance;
             //singleton.SetUserRecordType();
 
 
-            ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();
+            SetObjectToUpload uploadObjectToMongo = new SetObjectToUpload();
             uploadObjectToMongo.CreateUserRecord();
 
 
@@ -178,11 +178,11 @@ namespace AerobicWithMe.ViewModels
         {
             Console.WriteLine($"----> SelectedSortOption value :{SelectedSortOption}");
 
-            //var singleton = ObjectMongoFactory.Instance;
+            //var singleton = SetObjectToUpload.Instance;
             //singleton.SetUserRecordType();
 
 
-            ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();
+            SetObjectToUpload uploadObjectToMongo = new SetObjectToUpload();
             uploadObjectToMongo.CreateUserRecord();
 
 
@@ -467,7 +467,7 @@ namespace AerobicWithMe.ViewModels
 
 
 
-            ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();
+            SetObjectToUpload uploadObjectToMongo = new SetObjectToUpload();
             uploadObjectToMongo.CreateUserRecord();
 
 

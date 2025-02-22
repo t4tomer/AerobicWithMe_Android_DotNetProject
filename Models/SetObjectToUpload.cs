@@ -2,12 +2,12 @@
 
 namespace AerobicWithMe.Models
 {
-    public class ObjectMongoFactory
+    public class SetObjectToUpload
     {
         private object _currentObject;
 
         // Constructor initializes with a default type
-        public ObjectMongoFactory()
+        public SetObjectToUpload()
         {
             _currentObject = new MapPin();
             Console.WriteLine("Default object type is MapPin.");

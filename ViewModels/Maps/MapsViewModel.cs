@@ -58,10 +58,10 @@ namespace AerobicWithMe.ViewModels
         public MapsViewModel()
         {
             //set singlton to mappin 
-            //var singleton = ObjectMongoFactory.Instance;
+            //var singleton = SetObjectToUpload.Instance;
             //singleton.SetMapPinType();
 
-            ObjectMongoFactory UploadObjectToMong = new ObjectMongoFactory();
+            SetObjectToUpload UploadObjectToMong = new SetObjectToUpload();
             UploadObjectToMong.CreateMapPin();
 
             realm = RealmService.GetMainThreadRealm();
@@ -103,9 +103,9 @@ namespace AerobicWithMe.ViewModels
 
             //set the singlton object to mappin type 
 
-            //var singleton = ObjectMongoFactory.Instance;
+            //var singleton = SetObjectToUpload.Instance;
             //singleton.SetMapPinType();
-            ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();
+            SetObjectToUpload uploadObjectToMongo = new SetObjectToUpload();
             uploadObjectToMongo.CreateMapPin();
 
             realm = RealmService.GetMainThreadRealm();
@@ -350,10 +350,10 @@ namespace AerobicWithMe.ViewModels
             UserRecordsViewModel deleteUseres = new UserRecordsViewModel();
 
             //set singlton to UserRecord 
-            //var singleton = ObjectMongoFactory.Instance;
+            //var singleton = SetObjectToUpload.Instance;
             //singleton.SetUserRecordType();
 
-            ObjectMongoFactory uploadObjectToMongo = new ObjectMongoFactory();
+            SetObjectToUpload uploadObjectToMongo = new SetObjectToUpload();
             uploadObjectToMongo.CreateUserRecord();
 
             realm = RealmService.GetMainThreadRealm();
