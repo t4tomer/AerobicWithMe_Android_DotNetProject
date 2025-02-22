@@ -184,8 +184,7 @@ namespace AerobicWithMe.ViewModels
         private static bool CheckMapNameAlreadyExists(string inputTrackName)
         {
 
-            //var singleton = SetObjectToUpload.Instance;
-            //singleton.SetTrackMongoType();
+
 
             SetObjectToUpload UploadObjectToMong = new SetObjectToUpload();
             UploadObjectToMong.CreateTrackMongo();
