@@ -16,7 +16,7 @@
     <MauiXaml Update="Views\UserRecords\TimerPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\MapPin\MapsPage.xaml">
+    <MauiXaml Update="Views\MapSettings\MapsPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\MapSettings\DistancePage.xaml">

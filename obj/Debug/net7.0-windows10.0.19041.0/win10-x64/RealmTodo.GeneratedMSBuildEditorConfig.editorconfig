@@ -48,12 +48,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.LoginP
 build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
 
-[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/MapPin/MapsPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.MapPin.MapsPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\MapPin\MapsPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\MapPin\MapsPage.xaml
-
 [D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/MapSettings/AddMapToDbPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.MapSettings.AddMapToDbPage.xaml
@@ -77,6 +71,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.MapSettings.MapPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MapSettings\MapPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MapSettings\MapPage.xaml
+
+[D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/MapSettings/MapsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AerobicWithMe.Views.MapSettings.MapsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MapSettings\MapsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MapSettings\MapsPage.xaml
 
 [D:/GitHub/AerobicWithMeApp/AerobicWithMe_Android_DotNetProject/Views/UserRecords/AddRecordToDb.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
