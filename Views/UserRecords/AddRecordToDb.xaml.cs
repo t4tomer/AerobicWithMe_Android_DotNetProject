@@ -85,28 +85,6 @@ namespace AerobicWithMe.Views
         }
 
 
-        //private static string GetCurrentTime()
-        //{
-
-        //    MapUtility time = new MapUtility();
-        //    string test = new MapUtility().getCurrentTime();
-
-        //    return time.getCurrentTime();
-        //}
-
-
-        //private static string GetCurrentDate()
-        //{
-        //    // Get the current date and time
-        //    DateTime now = DateTime.Now;
-
-        //    string formattedDate = now.ToString("dd/MM/yyyy ");
-
-
-
-        //    return formattedDate;
-        //}
-
 
         public AddRecordToDb()
         {

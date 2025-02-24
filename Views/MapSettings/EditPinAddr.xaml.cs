@@ -53,6 +53,8 @@ namespace AerobicWithMe.Views
             }
         }
 
+        //used for testing 
+        /*
         public void PrintPinAddresses()
         {
             if (pinsList != null)
@@ -70,6 +72,7 @@ namespace AerobicWithMe.Views
                 Console.WriteLine("pinsList is null in PrintPinAddresses(PrintPinAddresses)");
             }
         }
+       
 
         public Maui.GoogleMaps.Pin getPin(string pinLabel)
         {
@@ -86,6 +89,7 @@ namespace AerobicWithMe.Views
             return null;
 
         }
+         */
 
         // cheaks of the pin exists in the pinlist 
         public bool PinExists(string pinLabel)
@@ -123,8 +127,6 @@ namespace AerobicWithMe.Views
         private void OnDoneButtonClicked(object sender, EventArgs e)
         {
 
-            //TODO fix the code so that if the user changes the pin label it will update it
-            // also in the mongoDB
             if (pinsList != null)
             {
                 string pinLabel = pinLabelEntry.Text;
