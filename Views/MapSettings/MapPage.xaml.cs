@@ -35,7 +35,7 @@ namespace AerobicWithMe.Views
         public bool _canAddPins = true; // Controls if pins can be added
         private string _mapTitle = ""; // Default value
         int strokeColorPolyline = 0;
-        private readonly ButtonInvoker _buttonInvoker = new ButtonInvoker();
+        private readonly ButtonInvoker _buttonInvoker = new ButtonInvoker();//part of the Command Design pattern 
 
         //private ButtonInvoker _buttonInvoker;
 
@@ -64,7 +64,7 @@ namespace AerobicWithMe.Views
             }
         }
 
-        public string MapTitle
+        public string MapTitle //show the map name on the xaml page
         {
             get => $"Track :{_mapTitle}";
             set

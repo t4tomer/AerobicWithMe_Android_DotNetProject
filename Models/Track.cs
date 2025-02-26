@@ -78,7 +78,7 @@ namespace AerobicWithMe.Models
 
 
 
-        public async Task AddTrack()
+        public async Task AddTrack() //used to add the MapPin object and the MongoTrack1 object
         {
             int pinNumber = 0;
             foreach (var pin in _pinsList)
@@ -124,8 +124,6 @@ namespace AerobicWithMe.Models
         private async Task DeleteSinglePin(MapPin pin)
         {
 
-            //var singleton = SetObjectToUpload.Instance;
-            //singleton.SetMapPinType();
 
             SetObjectToUpload UploadObjectToMongo = new SetObjectToUpload();
             UploadObjectToMongo.CreateMapPin();
@@ -138,8 +136,7 @@ namespace AerobicWithMe.Models
         private async Task DeleteTrack(MapPin pin)
         {
 
-            //var singleton = SetObjectToUpload.Instance;
-            //singleton.SetTrackMongoType();
+
             
             SetObjectToUpload UploadObjectToMongo = new SetObjectToUpload();
             UploadObjectToMongo.CreateTrackMongo();
@@ -226,14 +223,11 @@ namespace AerobicWithMe.Models
 
 
     
-
+        //used to upload MongoTrack1 object to the server 
         public async Task SaveTrack(ObjectId firstPinIdNumber)
         {
             MapUtility mapUtility = new MapUtility(_pinsList);
 
-
-            //var singleton = SetObjectToUpload.Instance;
-            //singleton.SetTrackMongoType();
 
 
             SetObjectToUpload UploadObjectToMongo = new SetObjectToUpload();

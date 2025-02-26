@@ -23,7 +23,7 @@ namespace AerobicWithMe.Views
         public EditPinAddr(List<Maui.GoogleMaps.Pin> newPinsList)
         {
             InitializeComponent();
-            SetPinsList(newPinsList);
+            setPinsList(newPinsList);
         }
 
         public EditPinAddr(List<Maui.GoogleMaps.Pin> newPinsList, Maui.GoogleMaps.Map newMyMap)
@@ -39,7 +39,7 @@ namespace AerobicWithMe.Views
 
 
 
-        public void SetPinsList(List<Maui.GoogleMaps.Pin> newPinsList)
+        public void setPinsList(List<Maui.GoogleMaps.Pin> newPinsList)
         {
             this.pinsList = newPinsList;
             if (pinsList != null)
@@ -49,7 +49,7 @@ namespace AerobicWithMe.Views
             }
             else
             {
-                Console.WriteLine("pinsList is null(SetPinsList)");
+                Console.WriteLine("pinsList is null(setPinsList)");
             }
         }
 
