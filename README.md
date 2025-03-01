@@ -1,4 +1,10 @@
-<div style="font-size: 45px;">
+<head>
+    <style>
+        body {
+            font-size: 45px;
+        }
+    </style>
+</head>
 
 # Running App with Google Maps
 
