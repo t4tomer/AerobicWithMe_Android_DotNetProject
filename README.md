@@ -1,3 +1,5 @@
+<div style="font-size: 20px;">
+
 # Running App with Google Maps
 
 ## Overview
@@ -44,7 +46,7 @@ This is an Android application built using .NET MAUI and C#. It leverages Google
 
 1. Clone this repository:
    ```sh
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/t4tomer/AerobicWithMe_Android_DotNetProject.git
    ```
 2. Open the project in Visual Studio.
 3. Ensure that all dependencies are installed.
