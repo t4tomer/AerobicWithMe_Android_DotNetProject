@@ -7,6 +7,7 @@
 <div style="display: flex; justify-content: space-between;">
     <img src="Images/pic1.png" alt="Home Screen" width="30%">
     <img src="Images/pic2.png" alt="Route Creation" width="30%">
+    <img src="Images/pic3.png" alt="Show Distance of Track Feature" width="30%">
 </div>
 
 <div style="display: flex; justify-content: space-between;">
